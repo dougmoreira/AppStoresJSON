@@ -14,6 +14,7 @@
 		A5BA82F8235A95F5004635B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5BA82F6235A95F5004635B3 /* LaunchScreen.storyboard */; };
 		A5BA8303235A95F5004635B3 /* AppStore_Using_JSON_APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA8302235A95F5004635B3 /* AppStore_Using_JSON_APITests.swift */; };
 		A5BA830E235A95F5004635B3 /* AppStore_Using_JSON_APIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA830D235A95F5004635B3 /* AppStore_Using_JSON_APIUITests.swift */; };
+		A5BA831C235A9688004635B3 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA831B235A9688004635B3 /* BaseTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A5BA8309235A95F5004635B3 /* AppStore Using JSON APIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppStore Using JSON APIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5BA830D235A95F5004635B3 /* AppStore_Using_JSON_APIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore_Using_JSON_APIUITests.swift; sourceTree = "<group>"; };
 		A5BA830F235A95F5004635B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5BA831B235A9688004635B3 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				A5BA82F4235A95F5004635B3 /* Assets.xcassets */,
 				A5BA82F6235A95F5004635B3 /* LaunchScreen.storyboard */,
 				A5BA82F9235A95F5004635B3 /* Info.plist */,
+				A5BA831B235A9688004635B3 /* BaseTabBarController.swift */,
 			);
 			path = "AppStore Using JSON API";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				A5BA82F0235A95F2004635B3 /* ViewController.swift in Sources */,
 				A5BA82EE235A95F2004635B3 /* AppDelegate.swift in Sources */,
+				A5BA831C235A9688004635B3 /* BaseTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +445,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "douglas.AppStore-Using-JSON-API";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -459,7 +463,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "douglas.AppStore-Using-JSON-API";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
