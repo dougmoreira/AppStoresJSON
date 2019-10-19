@@ -15,6 +15,9 @@
 		A5BA8303235A95F5004635B3 /* AppStore_Using_JSON_APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA8302235A95F5004635B3 /* AppStore_Using_JSON_APITests.swift */; };
 		A5BA830E235A95F5004635B3 /* AppStore_Using_JSON_APIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA830D235A95F5004635B3 /* AppStore_Using_JSON_APIUITests.swift */; };
 		A5BA831C235A9688004635B3 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA831B235A9688004635B3 /* BaseTabBarController.swift */; };
+		A5EB194A235B4FC90005D8A3 /* AppsSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB1949235B4FC90005D8A3 /* AppsSearchViewController.swift */; };
+		A5EB194C235B51FA0005D8A3 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB194B235B51FA0005D8A3 /* TodayViewController.swift */; };
+		A5EB194E235B52170005D8A3 /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB194D235B52170005D8A3 /* AppsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		A5BA830D235A95F5004635B3 /* AppStore_Using_JSON_APIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore_Using_JSON_APIUITests.swift; sourceTree = "<group>"; };
 		A5BA830F235A95F5004635B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5BA831B235A9688004635B3 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		A5EB1949235B4FC90005D8A3 /* AppsSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsSearchViewController.swift; sourceTree = "<group>"; };
+		A5EB194B235B51FA0005D8A3 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		A5EB194D235B52170005D8A3 /* AppsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +105,13 @@
 		A5BA82EC235A95F2004635B3 /* AppStore Using JSON API */ = {
 			isa = PBXGroup;
 			children = (
+				A5EB1948235B4FA10005D8A3 /* Controller */,
 				A5BA82ED235A95F2004635B3 /* AppDelegate.swift */,
 				A5BA82EF235A95F2004635B3 /* ViewController.swift */,
 				A5BA82F1235A95F2004635B3 /* Main.storyboard */,
 				A5BA82F4235A95F5004635B3 /* Assets.xcassets */,
 				A5BA82F6235A95F5004635B3 /* LaunchScreen.storyboard */,
 				A5BA82F9235A95F5004635B3 /* Info.plist */,
-				A5BA831B235A9688004635B3 /* BaseTabBarController.swift */,
 			);
 			path = "AppStore Using JSON API";
 			sourceTree = "<group>";
@@ -126,6 +132,17 @@
 				A5BA830F235A95F5004635B3 /* Info.plist */,
 			);
 			path = "AppStore Using JSON APIUITests";
+			sourceTree = "<group>";
+		};
+		A5EB1948235B4FA10005D8A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A5BA831B235A9688004635B3 /* BaseTabBarController.swift */,
+				A5EB1949235B4FC90005D8A3 /* AppsSearchViewController.swift */,
+				A5EB194B235B51FA0005D8A3 /* TodayViewController.swift */,
+				A5EB194D235B52170005D8A3 /* AppsViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +278,9 @@
 			files = (
 				A5BA82F0235A95F2004635B3 /* ViewController.swift in Sources */,
 				A5BA82EE235A95F2004635B3 /* AppDelegate.swift in Sources */,
+				A5EB194E235B52170005D8A3 /* AppsViewController.swift in Sources */,
+				A5EB194C235B51FA0005D8A3 /* TodayViewController.swift in Sources */,
+				A5EB194A235B4FC90005D8A3 /* AppsSearchViewController.swift in Sources */,
 				A5BA831C235A9688004635B3 /* BaseTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
