@@ -10,7 +10,7 @@ import UIKit
 
 class SearchResultCell: UICollectionViewCell {
 
-    let imageView: UIImageView = {
+    let appIconImageView: UIImageView = {
         let image = UIImageView()
         image.backgroundColor = .red
         image.heightAnchor.constraint(equalToConstant: 64).isActive = true
@@ -44,37 +44,75 @@ class SearchResultCell: UICollectionViewCell {
         button.titleLabel?.font = UIFont(name: "boldSystemFont", size: 14)
         button.layer.cornerRadius = 12
         button.backgroundColor = .gray
+        button.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        button.widthAnchor.constraint(equalToConstant: 80).isActive = true
         return button
     }()
 
+
+    func createScreenShotImageView() -> UIImageView{
+        let image = UIImageView()
+        image.backgroundColor = .blue
+        return image
+    }
+
+    lazy var screenShotImageView1 = self.createScreenShotImageView()
+    lazy var screenShotImageView2 = self.createScreenShotImageView()
+    lazy var screenShotImageView3 = self.createScreenShotImageView()
+
     override init(frame: CGRect){
         super.init(frame: frame)
-        backgroundColor = .green
+        backgroundColor = .white
 
         let labelStackView = UIStackView(arrangedSubviews: [
             nameLabel,categoryLabel,ratingsLabel
         ])
         labelStackView.axis = .vertical
 
-        let stackView = UIStackView(arrangedSubviews: [
-            imageView, labelStackView, getButton])
+        let infoTopStackView = UIStackView(arrangedSubviews: [
+            appIconImageView, labelStackView, getButton])
 
 
-        addSubview(stackView)
-        stackView.spacing = 12
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.alignment = .center
+        let screenShotStackView = UIStackView(arrangedSubviews: [
+            screenShotImageView1,screenShotImageView2, screenShotImageView3])
 
+        screenShotStackView.spacing = 12
+        screenShotStackView.distribution = .fillEqually
+        screenShotStackView.translatesAutoresizingMaskIntoConstraints = false
+
+
+        infoTopStackView.spacing = 12
+        infoTopStackView.translatesAutoresizingMaskIntoConstraints = false
+        infoTopStackView.alignment = .center
+
+        let mainStackView = UIStackView(arrangedSubviews: [
+            infoTopStackView, screenShotStackView
+            ])
+        mainStackView.axis = .vertical
+        mainStackView.spacing = 16
+
+        addSubview(mainStackView)
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: self.topAnchor),
-            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-            stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            mainStackView.topAnchor.constraint(equalTo: self.topAnchor),
+            mainStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            mainStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            mainStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            ])
+        NSLayoutConstraint.activate([
+            infoTopStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 12),
+            infoTopStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            infoTopStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+//            infoTopStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 4)
+            ])
+        NSLayoutConstraint.activate([
+//            screenShotStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 12),
+            screenShotStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            screenShotStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            screenShotStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
             ])
 
-
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
