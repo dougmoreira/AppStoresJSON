@@ -1,0 +1,6 @@
+framework module Pods_AppStore_Using_JSON_API {
+  umbrella header "Pods-AppStore Using JSON API-umbrella.h"
+
+  export *
+  module * { export * }
+}

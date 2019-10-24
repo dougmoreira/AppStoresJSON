@@ -6,7 +6,8 @@
 //  Copyright © 2019 Douglas Moreira. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import SDWebImage
 
 class Service {
     static let shared = Service() //singleton

@@ -31,6 +31,15 @@ class SearchViewController: UICollectionViewController, UICollectionViewDelegate
         cell.nameLabel.text = result.trackName
         cell.categoryLabel.text = result.primaryGenreName
         cell.ratingsLabel.text = "Rating: \(result.averageUserRating ?? 0)"
+        cell.appIconImageView.sd_setImage(with: URL(string: result.artworkUrl100))
+        cell.screenShotImageView1.sd_setImage(with: URL(string: result.screenshotUrls[0]))
+        if result.screenshotUrls.count > 1{
+            cell.screenShotImageView2.sd_setImage(with: URL(string: result.screenshotUrls[1]))
+        }
+        if result.screenshotUrls.count > 2{
+            cell.screenShotImageView3.sd_setImage(with: URL(string: result.screenshotUrls[2]))
+        }
+
 
         return cell
     }
