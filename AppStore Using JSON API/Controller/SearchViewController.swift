@@ -21,16 +21,22 @@ class SearchViewController: UICollectionViewController, UICollectionViewDelegate
 
     }
 
+    fileprivate var appResults = [Result]() //variável que irá receber os dados
+
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! SearchResultCell
 
-        cell.nameLabel.text = "Here is my App name"
+        let result = appResults[indexPath.item]
+        cell.nameLabel.text = result.trackName
+        cell.categoryLabel.text = result.primaryGenreName
+        cell.ratingsLabel.text = "Rating: \(result.averageUserRating ?? 0)"
+
         return cell
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return appResults.count
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -47,35 +53,18 @@ class SearchViewController: UICollectionViewController, UICollectionViewDelegate
 
     fileprivate func fetchITunesApps(){
 
-        let urlString = "https://itunes.apple.com/search?term=instagram&entity=software"
-        guard let url = URL(string: urlString) else {return}
-
-        // fetch data from internet
-
-
-        URLSession.shared.dataTask(with: url) { (data, resp, err) in
-
-            if let err = err{
-                print("Faield to fetch apps from iTunes", err)
+        Service.shared.fetchApps { (results, err) in
+            if let err  = err{
+                print("Faield to fetch apps:", err)
                 return
             }
 
-            //success
-
-            guard let data = data else {return}
-            do{
-                let searchResult = try JSONDecoder().decode(SearchResult.self, from: data)
-//                print(searchResult)
-
-                searchResult.results.forEach({print($0.trackName, $0.primaryGenreName)})
-
-            }catch let jsonError{
-                print("Faield to decode json:", jsonError)
+            self.appResults = results
+            DispatchQueue.main.sync {
+                self.collectionView.reloadData()
             }
-
-
-            }.resume()// isso inicia o pedido
-
+            
+        }
 
 
     }
