@@ -102,10 +102,8 @@ class SearchResultCell: UICollectionViewCell {
             infoTopStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 12),
             infoTopStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             infoTopStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-//            infoTopStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 4)
             ])
         NSLayoutConstraint.activate([
-//            screenShotStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 12),
             screenShotStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
             screenShotStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
             screenShotStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A50230EE236120DD00D55C4D /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50230ED236120DD00D55C4D /* SearchResult.swift */; };
 		A529158B235E6960007E61F3 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A529158A235E6960007E61F3 /* SearchResultCell.swift */; };
 		A5BA82EE235A95F2004635B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA82ED235A95F2004635B3 /* AppDelegate.swift */; };
 		A5BA82F0235A95F2004635B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA82EF235A95F2004635B3 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A50230ED236120DD00D55C4D /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		A529158A235E6960007E61F3 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		A5BA82EA235A95F2004635B3 /* AppStore Using JSON API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppStore Using JSON API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5BA82ED235A95F2004635B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A50230EC236120BC00D55C4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A50230ED236120DD00D55C4D /* SearchResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A5291587235E6878007E61F3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 		A5BA82EC235A95F2004635B3 /* AppStore Using JSON API */ = {
 			isa = PBXGroup;
 			children = (
+				A50230EC236120BC00D55C4D /* Model */,
 				A5291587235E6878007E61F3 /* Views */,
 				A5EB1948235B4FA10005D8A3 /* Controller */,
 				A5BA82ED235A95F2004635B3 /* AppDelegate.swift */,
@@ -289,6 +300,7 @@
 			files = (
 				A529158B235E6960007E61F3 /* SearchResultCell.swift in Sources */,
 				A5BA82F0235A95F2004635B3 /* ViewController.swift in Sources */,
+				A50230EE236120DD00D55C4D /* SearchResult.swift in Sources */,
 				A5BA82EE235A95F2004635B3 /* AppDelegate.swift in Sources */,
 				A5EB194E235B52170005D8A3 /* AppsViewController.swift in Sources */,
 				A5EB194C235B51FA0005D8A3 /* TodayViewController.swift in Sources */,

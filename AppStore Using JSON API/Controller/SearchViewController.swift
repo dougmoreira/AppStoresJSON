@@ -17,10 +17,15 @@ class SearchViewController: UICollectionViewController, UICollectionViewDelegate
         collectionView.backgroundColor = .white
         collectionView.register(SearchResultCell.self, forCellWithReuseIdentifier: cellID)
 
+        fetchITunesApps()
+
     }
 
+
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! SearchResultCell
+
+        cell.nameLabel.text = "Here is my App name"
         return cell
     }
 
@@ -39,6 +44,43 @@ class SearchViewController: UICollectionViewController, UICollectionViewDelegate
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    fileprivate func fetchITunesApps(){
+
+        let urlString = "https://itunes.apple.com/search?term=instagram&entity=software"
+        guard let url = URL(string: urlString) else {return}
+
+        // fetch data from internet
+
+
+        URLSession.shared.dataTask(with: url) { (data, resp, err) in
+
+            if let err = err{
+                print("Faield to fetch apps from iTunes", err)
+                return
+            }
+
+            //success
+
+            guard let data = data else {return}
+            do{
+                let searchResult = try JSONDecoder().decode(SearchResult.self, from: data)
+//                print(searchResult)
+
+                searchResult.results.forEach({print($0.trackName, $0.primaryGenreName)})
+
+            }catch let jsonError{
+                print("Faield to decode json:", jsonError)
+            }
+
+
+            }.resume()// isso inicia o pedido
+
+
+
+    }
+
+
     
 
 
