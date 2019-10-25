@@ -15,7 +15,7 @@ class Service {
     func fetchApps(completion: @escaping ([Result], Error?) -> ()){
         print("Fetching itunes file from service layer")
 
-        let urlString = "https://itunes.apple.com/search?term=instagram&entity=software"
+        let urlString = "https://itunes.apple.com/search?term=hotmart&entity=software"
         guard let url = URL(string: urlString) else {return}
         // fetch data from internet
 
