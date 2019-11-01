@@ -38,6 +38,7 @@ class Service {
                 completion([], jsonError)
             }
 
+            //teste
 
             }.resume()// isso inicia o pedido
 
