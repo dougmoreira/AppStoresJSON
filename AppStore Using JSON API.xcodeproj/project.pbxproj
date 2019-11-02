@@ -27,6 +27,7 @@
 		EC0A69A7236DDCBB00887123 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */; };
 		EC0A69A9236DE33B00887123 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A8236DE33B00887123 /* Extentions.swift */; };
 		EC0A69AB236DF67C00887123 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69AA236DF67C00887123 /* UIView+Layout.swift */; };
+		EC0A69AD236DFC3600887123 /* AppsHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69AC236DFC3600887123 /* AppsHorizontalController.swift */; };
 		F67A329C06C119D24A2A6A03 /* Pods_AppStore_Using_JSON_APIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF6560647F00EFC60AB0A3A /* Pods_AppStore_Using_JSON_APIUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
 		EC0A69A8236DE33B00887123 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		EC0A69AA236DF67C00887123 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		EC0A69AC236DFC3600887123 /* AppsHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHorizontalController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 			children = (
 				A5EB194D235B52170005D8A3 /* AppsViewController.swift */,
 				EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */,
+				EC0A69AC236DFC3600887123 /* AppsHorizontalController.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				A5EB194C235B51FA0005D8A3 /* TodayViewController.swift in Sources */,
 				A5EB194A235B4FC90005D8A3 /* SearchViewController.swift in Sources */,
 				A5BA831C235A9688004635B3 /* BaseTabBarController.swift in Sources */,
+				EC0A69AD236DFC3600887123 /* AppsHorizontalController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

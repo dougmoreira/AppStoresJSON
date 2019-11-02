@@ -24,12 +24,10 @@ class AppsGroupCell: UICollectionViewCell {
         
         titleLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor)
         horizontalController.view.anchor(top: titleLabel.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
-        horizontalController.view.backgroundColor = .red
 
-        
     }
     
-    let horizontalController = UIViewController()
+    let horizontalController = AppsHorizontalController()
     let titleLabel = UILabel(text: "App Section here", font: .boldSystemFont(ofSize: 30))
     
 
