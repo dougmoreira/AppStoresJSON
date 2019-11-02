@@ -15,25 +15,22 @@ class AppsGroupCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(titleLabel)
+        addSubview(horizontalController.view)
         setupUI()
     }
     
     fileprivate func setupUI() {
         backgroundColor = .purple
-        titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
+        
+        titleLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor)
+        horizontalController.view.anchor(top: titleLabel.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
+        horizontalController.view.backgroundColor = .red
+
+        
     }
     
-    let titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "App Section"
-        label.font = .boldSystemFont(ofSize: 30)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-//    let titleLabel = UILabel(text: "App Section here", font: .boldSystemFont(ofSize: 30)) isnt work because is missing some constraint...
+    let horizontalController = UIViewController()
+    let titleLabel = UILabel(text: "App Section here", font: .boldSystemFont(ofSize: 30))
     
 
     required init?(coder: NSCoder) {
