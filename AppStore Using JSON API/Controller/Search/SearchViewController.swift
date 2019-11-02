@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+class SearchViewController: BaseListController, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
 
     fileprivate let cellID = "cell"
     fileprivate let searchController = UISearchController(searchResultsController: nil)
@@ -76,14 +76,6 @@ class SearchViewController: UICollectionViewController, UICollectionViewDelegate
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 350)
-    }
-
-    init(){
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 
     fileprivate func fetchITunesApps(){

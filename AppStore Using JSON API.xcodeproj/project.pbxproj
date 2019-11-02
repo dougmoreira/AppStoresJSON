@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,9 @@
 		A5EB194A235B4FC90005D8A3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB1949235B4FC90005D8A3 /* SearchViewController.swift */; };
 		A5EB194C235B51FA0005D8A3 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB194B235B51FA0005D8A3 /* TodayViewController.swift */; };
 		A5EB194E235B52170005D8A3 /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB194D235B52170005D8A3 /* AppsViewController.swift */; };
+		EC0A69A2236DD61F00887123 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A1236DD61F00887123 /* BaseListController.swift */; };
+		EC0A69A7236DDCBB00887123 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */; };
+		EC0A69A9236DE33B00887123 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A8236DE33B00887123 /* Extentions.swift */; };
 		F67A329C06C119D24A2A6A03 /* Pods_AppStore_Using_JSON_APIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF6560647F00EFC60AB0A3A /* Pods_AppStore_Using_JSON_APIUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +76,9 @@
 		A5EB194D235B52170005D8A3 /* AppsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsViewController.swift; sourceTree = "<group>"; };
 		C1F12684C55D2FC4169E7458 /* Pods-AppStore Using JSON API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore Using JSON API.debug.xcconfig"; path = "Target Support Files/Pods-AppStore Using JSON API/Pods-AppStore Using JSON API.debug.xcconfig"; sourceTree = "<group>"; };
 		D29929AA46C039201477F327 /* Pods-AppStore Using JSON APIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore Using JSON APIUITests.release.xcconfig"; path = "Target Support Files/Pods-AppStore Using JSON APIUITests/Pods-AppStore Using JSON APIUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EC0A69A1236DD61F00887123 /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
+		EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
+		EC0A69A8236DE33B00887123 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +119,6 @@
 				3C60EF51DBC7741B5B58CD6A /* Pods-AppStore Using JSON APIUITests.debug.xcconfig */,
 				D29929AA46C039201477F327 /* Pods-AppStore Using JSON APIUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -166,11 +171,11 @@
 		A5BA82EC235A95F2004635B3 /* AppStore Using JSON API */ = {
 			isa = PBXGroup;
 			children = (
+				EC0A69A5236DD91200887123 /* Helpers */,
 				A50230EF2361295600D55C4D /* Service */,
 				A50230EC236120BC00D55C4D /* Model */,
 				A5291587235E6878007E61F3 /* Views */,
 				A5EB1948235B4FA10005D8A3 /* Controller */,
-				A5BA82ED235A95F2004635B3 /* AppDelegate.swift */,
 				A5BA82EF235A95F2004635B3 /* ViewController.swift */,
 				A5BA82F1235A95F2004635B3 /* Main.storyboard */,
 				A5BA82F4235A95F5004635B3 /* Assets.xcassets */,
@@ -202,9 +207,10 @@
 			isa = PBXGroup;
 			children = (
 				A5BA831B235A9688004635B3 /* BaseTabBarController.swift */,
-				A5EB1949235B4FC90005D8A3 /* SearchViewController.swift */,
-				A5EB194B235B51FA0005D8A3 /* TodayViewController.swift */,
-				A5EB194D235B52170005D8A3 /* AppsViewController.swift */,
+				EC0A69A1236DD61F00887123 /* BaseListController.swift */,
+				EC0A69A4236DD8E900887123 /* Today */,
+				EC0A69A3236DD8D600887123 /* Search */,
+				EC0A69A0236DD5FF00887123 /* Apps */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -217,6 +223,40 @@
 				5EF6560647F00EFC60AB0A3A /* Pods_AppStore_Using_JSON_APIUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC0A69A0236DD5FF00887123 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				A5EB194D235B52170005D8A3 /* AppsViewController.swift */,
+				EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		EC0A69A3236DD8D600887123 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				A5EB1949235B4FC90005D8A3 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		EC0A69A4236DD8E900887123 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				A5EB194B235B51FA0005D8A3 /* TodayViewController.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		EC0A69A5236DD91200887123 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A5BA82ED235A95F2004635B3 /* AppDelegate.swift */,
+				EC0A69A8236DE33B00887123 /* Extentions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,12 +480,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC0A69A2236DD61F00887123 /* BaseListController.swift in Sources */,
 				A529158B235E6960007E61F3 /* SearchResultCell.swift in Sources */,
+				EC0A69A7236DDCBB00887123 /* AppsGroupCell.swift in Sources */,
 				A5BA82F0235A95F2004635B3 /* ViewController.swift in Sources */,
 				A50230EE236120DD00D55C4D /* SearchResult.swift in Sources */,
 				A5BA82EE235A95F2004635B3 /* AppDelegate.swift in Sources */,
 				A5EB194E235B52170005D8A3 /* AppsViewController.swift in Sources */,
 				A50230F12361296A00D55C4D /* Service.swift in Sources */,
+				EC0A69A9236DE33B00887123 /* Extentions.swift in Sources */,
 				A5EB194C235B51FA0005D8A3 /* TodayViewController.swift in Sources */,
 				A5EB194A235B4FC90005D8A3 /* SearchViewController.swift in Sources */,
 				A5BA831C235A9688004635B3 /* BaseTabBarController.swift in Sources */,

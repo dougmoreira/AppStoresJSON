@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TodayViewController: UICollectionViewController {
+class TodayViewController: BaseListController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,14 +16,5 @@ class TodayViewController: UICollectionViewController {
         collectionView.backgroundColor = .blue
         
     }
-
-    init(){
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
 
 }
