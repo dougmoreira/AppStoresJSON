@@ -12,10 +12,10 @@ import SDWebImage
 class Service {
     static let shared = Service() //singleton
 
-    func fetchApps(completion: @escaping ([Result], Error?) -> ()){
+    func fetchApps(searchTerm: String, completion: @escaping ([Result], Error?) -> ()){
         print("Fetching itunes file from service layer")
 
-        let urlString = "https://itunes.apple.com/search?term=google&entity=software"
+        let urlString = "https://itunes.apple.com/search?term=\(searchTerm)&entity=software"
         guard let url = URL(string: urlString) else {return}
         // fetch data from internet
 
