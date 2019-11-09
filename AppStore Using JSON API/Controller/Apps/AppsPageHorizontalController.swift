@@ -8,9 +8,9 @@
 
 import UIKit
 
-let cellID = "id"
 
-class AppsHorizontalController: BaseListController, UICollectionViewDelegateFlowLayout{
+
+class AppsPageHorizontalController: BaseListController, UICollectionViewDelegateFlowLayout{
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
