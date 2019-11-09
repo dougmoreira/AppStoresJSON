@@ -20,9 +20,11 @@ class AppsGroupCell: UICollectionViewCell {
     }
     
     fileprivate func setupUI() {
-        backgroundColor = .purple
         
-        titleLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor)
+        titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor.self, constant: 18).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: topAnchor.self, constant: 12).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor.self, constant: 2).isActive = true
+        
         horizontalController.view.anchor(top: titleLabel.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
 
     }
