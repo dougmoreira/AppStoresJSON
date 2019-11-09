@@ -57,11 +57,12 @@ class SearchResultCell: UICollectionViewCell {
         let button = UIButton(type: .system)
         button.setTitleColor(.blue, for: .normal)
         button.setTitle("GET", for: .normal)
-        button.titleLabel?.font = UIFont(name: "boldSystemFont", size: 14)
-        button.layer.cornerRadius = 12
-        button.backgroundColor = .gray
+        button.titleLabel?.font = UIFont(name: "boldSystemFont", size: 16)
+        button.layer.cornerRadius = 16
+        button.backgroundColor = UIColor(white: 0.95, alpha: 1)
         button.heightAnchor.constraint(equalToConstant: 32).isActive = true
         button.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        button.centerYInSuperview()
         return button
     }()
 
