@@ -8,7 +8,6 @@
 
 import UIKit
 
-let cellID = "id"
 
 class AppsHorizontalController: BaseListController, UICollectionViewDelegateFlowLayout{
     override func viewDidLoad() {
