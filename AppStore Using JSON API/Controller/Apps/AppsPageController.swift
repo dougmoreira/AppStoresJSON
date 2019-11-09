@@ -16,15 +16,26 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         collectionView.backgroundColor = .white
+<<<<<<< HEAD:AppStore Using JSON API/Controller/Apps/AppsPageController.swift
         collectionView.register(AppsPageGroupCellHorizontalController.self, forCellWithReuseIdentifier: cellID)
         collectionView.register(AppsHeaderRowCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
+=======
+        collectionView.register(AppsGroupCell.self, forCellWithReuseIdentifier: cellID)
+        collectionView.register(AppsPageHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
+>>>>>>> e2c95779b9150f0486300a51409257decfb31391:AppStore Using JSON API/Controller/Apps/AppsPageController.swift
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath)
         return header
+<<<<<<< HEAD:AppStore Using JSON API/Controller/Apps/AppsPageController.swift
+=======
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return .init(width: view.frame.width, height: 300)
+>>>>>>> e2c95779b9150f0486300a51409257decfb31391:AppStore Using JSON API/Controller/Apps/AppsPageController.swift
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -49,7 +60,9 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
         return .init(top: 16, left: 0, bottom: 0, right: 0)
     }
     
- 
+    
+    
+    
     
     init(){
          super.init(collectionViewLayout: UICollectionViewFlowLayout())
