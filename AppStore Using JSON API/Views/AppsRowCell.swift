@@ -51,13 +51,13 @@ class AppsRowCell: UICollectionViewCell{
         super.init(frame: frame)
         backgroundColor = .white
         
-        let horizontalStackView = UIStackView(arrangedSubviews:
+        let verticalStackView = UIStackView(arrangedSubviews:
         [AppNameLabel,AppCompanyNameLabel])
-        horizontalStackView.axis = .vertical
-        horizontalStackView.spacing = 16
+        verticalStackView.axis = .vertical
+        verticalStackView.spacing = 16
                 
         let stackView = UIStackView(arrangedSubviews:
-        [imageView, horizontalStackView, getButton])
+        [imageView, verticalStackView, getButton])
         stackView.spacing = 16
         stackView.alignment = .center
         
