@@ -20,7 +20,7 @@ class AppsHeaderCell: UICollectionViewCell {
         image.clipsToBounds = true
         image.contentMode = .scaleToFill
         image.translatesAutoresizingMaskIntoConstraints = false
-        return image
+        return image    
     }()
     
     

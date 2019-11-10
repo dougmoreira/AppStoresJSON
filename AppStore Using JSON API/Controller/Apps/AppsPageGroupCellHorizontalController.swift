@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 
 
-class AppsGroupCell: UICollectionViewCell {
+class AppsPageGroupCellHorizontalController: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,7 +29,7 @@ class AppsGroupCell: UICollectionViewCell {
 
     }
     
-    let horizontalController = AppsHorizontalController()
+    let horizontalController = AppsPageHorizontalController()
     let titleLabel = UILabel(text: "App Section here", font: .boldSystemFont(ofSize: 30))
     
 
