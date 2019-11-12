@@ -29,8 +29,6 @@ class AppsGroupCell: UICollectionViewCell {
         let verticalStackView = UIStackView(arrangedSubviews: [titleSectionLabel,horizontalController.view])
         addSubview(verticalStackView)
         verticalStackView.axis = .vertical
-//        verticalStackView.spacing = 12
-//        verticalStackView.fillSuperview()
         verticalStackView.fillSuperview(padding: .init(top: 12, left: 16, bottom: 0, right: 12))
 
         
