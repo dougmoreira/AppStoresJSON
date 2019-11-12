@@ -153,10 +153,8 @@
 		A5291587235E6878007E61F3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A529158A235E6960007E61F3 /* SearchResultCell.swift */,
-				EC58A03B23721ED700901990 /* AppsRowCell.swift */,
-				EC4B783E237852EE00F3FAF7 /* AppsHeaderCell.swift */,
-				EC4B783A2378457B00F3FAF7 /* AppsPageHeader.swift */,
+				ECE559FE237B5C5F00043E91 /* Search Page */,
+				ECE559FD237B5C4D00043E91 /* Apps Page */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,7 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				A5EB194D235B52170005D8A3 /* AppsViewController.swift */,
-				EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */,
 				EC0A69AC236DFC3600887123 /* AppsHorizontalController.swift */,
 				EC4B783C2378498200F3FAF7 /* AppsHeaderController.swift */,
 			);
@@ -275,6 +272,25 @@
 				EC0A69AA236DF67C00887123 /* UIView+Layout.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		ECE559FD237B5C4D00043E91 /* Apps Page */ = {
+			isa = PBXGroup;
+			children = (
+				EC4B783A2378457B00F3FAF7 /* AppsPageHeader.swift */,
+				EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */,
+				EC58A03B23721ED700901990 /* AppsRowCell.swift */,
+				EC4B783E237852EE00F3FAF7 /* AppsHeaderCell.swift */,
+			);
+			path = "Apps Page";
+			sourceTree = "<group>";
+		};
+		ECE559FE237B5C5F00043E91 /* Search Page */ = {
+			isa = PBXGroup;
+			children = (
+				A529158A235E6960007E61F3 /* SearchResultCell.swift */,
+			);
+			path = "Search Page";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

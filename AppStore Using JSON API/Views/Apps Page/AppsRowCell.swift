@@ -61,6 +61,7 @@ class AppsRowCell: UICollectionViewCell{
         stackView.spacing = 16
         stackView.alignment = .center
         
+        
         imageView.constrainWidth(constant: 64)
         imageView.constrainHeight(constant: 64)
         AppCompanyNameLabel.topAnchor.constraint(equalTo: AppNameLabel.bottomAnchor, constant: 2).isActive = true
