@@ -39,26 +39,32 @@ class AppsViewController: UICollectionViewController, UICollectionViewDelegateFl
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "id", for: indexPath) as! AppsGroupCell
-//        cell.titleSectionLabel.text = AppGroup.
+        cell.titleSectionLabel.text = editorsChoiceGames?.feed.title
+        cell.horizontalController.appGroup = editorsChoiceGames
+        cell.horizontalController.collectionView.reloadData()
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.frame.width, height: 250)
+        return .init(width: view.frame.width, height: 300)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .init(top: 16, left: 0, bottom: 0, right: 0)
     }
     
+    var editorsChoiceGames: AppGroup?
+    
     fileprivate func fetchData(){
-        print("Fetching new jason data")
         Service.shared.fetchGames { (appGroup, err) in
             if let err = err {
                 print("Failed to fetch fames: ", err)
                 return
             }
-            print(appGroup?.feed.results)
+            self.editorsChoiceGames = appGroup
+            DispatchQueue.main.sync {
+                self.collectionView.reloadData()
+            }
         }
     }
     
