@@ -23,6 +23,7 @@
 		A5EB194A235B4FC90005D8A3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB1949235B4FC90005D8A3 /* SearchViewController.swift */; };
 		A5EB194C235B51FA0005D8A3 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB194B235B51FA0005D8A3 /* TodayViewController.swift */; };
 		A5EB194E235B52170005D8A3 /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB194D235B52170005D8A3 /* AppsViewController.swift */; };
+		EC01B9D6237B71FF00E704E6 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC01B9D5237B71FF00E704E6 /* AppGroup.swift */; };
 		EC0A69A2236DD61F00887123 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A1236DD61F00887123 /* BaseListController.swift */; };
 		EC0A69A7236DDCBB00887123 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */; };
 		EC0A69A9236DE33B00887123 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A8236DE33B00887123 /* Extentions.swift */; };
@@ -82,6 +83,7 @@
 		A5EB194D235B52170005D8A3 /* AppsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsViewController.swift; sourceTree = "<group>"; };
 		C1F12684C55D2FC4169E7458 /* Pods-AppStore Using JSON API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore Using JSON API.debug.xcconfig"; path = "Target Support Files/Pods-AppStore Using JSON API/Pods-AppStore Using JSON API.debug.xcconfig"; sourceTree = "<group>"; };
 		D29929AA46C039201477F327 /* Pods-AppStore Using JSON APIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore Using JSON APIUITests.release.xcconfig"; path = "Target Support Files/Pods-AppStore Using JSON APIUITests/Pods-AppStore Using JSON APIUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EC01B9D5237B71FF00E704E6 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		EC0A69A1236DD61F00887123 /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
 		EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
 		EC0A69A8236DE33B00887123 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				A50230ED236120DD00D55C4D /* SearchResult.swift */,
+				EC01B9D5237B71FF00E704E6 /* AppGroup.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				EC0A69A2236DD61F00887123 /* BaseListController.swift in Sources */,
 				A529158B235E6960007E61F3 /* SearchResultCell.swift in Sources */,
 				EC58A03C23721ED700901990 /* AppsRowCell.swift in Sources */,
+				EC01B9D6237B71FF00E704E6 /* AppGroup.swift in Sources */,
 				EC0A69A7236DDCBB00887123 /* AppsGroupCell.swift in Sources */,
 				EC4B783F237852EE00F3FAF7 /* AppsHeaderCell.swift in Sources */,
 				A5BA82F0235A95F2004635B3 /* ViewController.swift in Sources */,

@@ -19,7 +19,10 @@ class AppsViewController: UICollectionViewController, UICollectionViewDelegateFl
         collectionView.backgroundColor = .white
         collectionView.register(AppsGroupCell.self, forCellWithReuseIdentifier: "id")
         collectionView.register(AppsPageHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
+        
+        fetchData()
     }
+    
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath)
@@ -31,20 +34,38 @@ class AppsViewController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "id", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "id", for: indexPath) as! AppsGroupCell
+        cell.titleSectionLabel.text = editorsChoiceGames?.feed.title
+        cell.horizontalController.appGroup = editorsChoiceGames
+        cell.horizontalController.collectionView.reloadData()
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.frame.width, height: 250)
+        return .init(width: view.frame.width, height: 300)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .init(top: 16, left: 0, bottom: 0, right: 0)
+    }
+    
+    var editorsChoiceGames: AppGroup?
+    
+    fileprivate func fetchData(){
+        Service.shared.fetchGames { (appGroup, err) in
+            if let err = err {
+                print("Failed to fetch fames: ", err)
+                return
+            }
+            self.editorsChoiceGames = appGroup
+            DispatchQueue.main.sync {
+                self.collectionView.reloadData()
+            }
+        }
     }
     
  
