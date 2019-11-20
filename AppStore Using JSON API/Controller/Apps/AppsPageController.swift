@@ -61,37 +61,58 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
     
     fileprivate func fetchData(){
         
-        Service.shared.fetchAppGroup(urlString: "https://rss.itunes.apple.com/api/v1/br/ios-apps/top-paid/all/50/explicit.json") { (appGroup, err) in
-            if let group = appGroup {
-                self.groups.append(group)
-
-            }
-            
-            DispatchQueue.main.sync {
-                self.collectionView.reloadData()
-            }
-        }
-
+        var topPaidAppsGroup: AppGroup?
+        var topFreeAppsGroup: AppGroup?
+        var topGrossingAppsGroup: AppGroup?
+        
+        let dispatchGroup = DispatchGroup()
+        
+        dispatchGroup.enter()
         Service.shared.fetchAppGroup(urlString: "https://rss.itunes.apple.com/api/v1/br/ios-apps/top-free/all/50/explicit.json") { (appGroup, err) in
-            if let group = appGroup {
-                self.groups.append(group)
-
-            }
+            dispatchGroup.leave()
+            
+            topFreeAppsGroup = appGroup
             
             DispatchQueue.main.sync {
                 self.collectionView.reloadData()
             }
         }
         
-        Service.shared.fetchAppGroup(urlString: "https://rss.itunes.apple.com/api/v1/br/ios-apps/top-grossing/all/50/explicit.json") { (appGroup, err) in
-            if let group = appGroup {
-                self.groups.append(group)
-
-            }
+        dispatchGroup.enter()
+        Service.shared.fetchAppGroup(urlString: "https://rss.itunes.apple.com/api/v1/br/ios-apps/top-paid/all/50/explicit.json") { (appGroup, err) in
+            dispatchGroup.leave()
+            topPaidAppsGroup = appGroup
             
             DispatchQueue.main.sync {
                 self.collectionView.reloadData()
             }
+        }
+
+        dispatchGroup.enter()
+        Service.shared.fetchAppGroup(urlString: "https://rss.itunes.apple.com/api/v1/br/ios-apps/top-grossing/all/50/explicit.json") { (appGroup, err) in
+            dispatchGroup.leave()
+            
+            topGrossingAppsGroup = appGroup
+            
+            DispatchQueue.main.sync {
+                self.collectionView.reloadData()
+            }
+        }
+        
+        dispatchGroup.notify(queue: .main) {
+            print("complete dispatch group tasks...")
+            
+            if let group = topFreeAppsGroup{
+                self.groups.append(group)
+            }
+            if let group = topPaidAppsGroup{
+                self.groups.append(group)
+            }
+            if let group = topGrossingAppsGroup{
+                self.groups.append(group)
+            }
+            
+            self.collectionView.reloadData()
         }
     }
     
