@@ -40,26 +40,41 @@ class Service {
             }.resume()// isso inicia o pedido
     }
     
-    func fetchGames(completion: @escaping (AppGroup?, Error?) -> ()){
-        guard let url = URL(string: "https://rss.itunes.apple.com/api/v1/us/ios-apps/new-games-we-love/all/50/explicit.json") else {return}
+    func fetchTopGrossing(completion: @escaping (AppGroup?, Error?) -> ()){
+        let urlString = "https://rss.itunes.apple.com/api/v1/us/ios-apps/new-games-we-love/all/50/explicit.json"
         
-        URLSession.shared.dataTask(with: url){ (data,resp,err) in
-            
-            if let err = err{
-                completion(nil,err)
-                return
-            }
-            
-            do{
-                let appGroup = try JSONDecoder().decode(AppGroup.self, from: data!)
-                completion(appGroup, nil)
-            } catch{
-                completion(nil, error)
-                print("Failed to decode: ", error)
-            }
-            
-            
-            
-        }.resume() //will fire our request
+        fetchAppGroup(urlString: urlString, completion: completion)
+        
+    }
+    
+    func fetchGames(completion: @escaping (AppGroup?, Error?) -> ()){
+        let urlString = "https://rss.itunes.apple.com/api/v1/br/ios-apps/top-paid/all/50/explicit.json)"
+        
+        fetchAppGroup(urlString: urlString, completion: completion)
+        
+    }
+    
+    
+    func fetchAppGroup(urlString: String, completion: @escaping (AppGroup?,Error?) -> Void){
+        guard let url = URL(string: urlString) else {return}
+             
+             URLSession.shared.dataTask(with: url){ (data,resp,err) in
+                 
+                 if let err = err{
+                     completion(nil,err)
+                     return
+                 }
+                 
+                 do{
+                     let appGroup = try JSONDecoder().decode(AppGroup.self, from: data!)
+                     completion(appGroup, nil)
+                 } catch{
+                     completion(nil, error)
+                     print("Failed to decode: ", error)
+                 }
+        
+             }.resume() //will fire our request
     }
 }
+
+

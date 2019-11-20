@@ -11,7 +11,7 @@ import SDWebImage
 
 let headerID = "headerID"
 
-class AppsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class AppsPageController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +34,15 @@ class AppsViewController: UICollectionViewController, UICollectionViewDelegateFl
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return groups.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "id", for: indexPath) as! AppsGroupCell
-        cell.titleSectionLabel.text = editorsChoiceGames?.feed.title
-        cell.horizontalController.appGroup = editorsChoiceGames
+        
+        let appGroup = groups[indexPath.item]
+        cell.titleSectionLabel.text = appGroup.feed.title
+        cell.horizontalController.appGroup = appGroup
         cell.horizontalController.collectionView.reloadData()
         return cell
     }
@@ -53,20 +55,47 @@ class AppsViewController: UICollectionViewController, UICollectionViewDelegateFl
         return .init(top: 16, left: 0, bottom: 0, right: 0)
     }
     
-    var editorsChoiceGames: AppGroup?
+//    var editorsChoiceGames: AppGroup?
+    
+    var groups = [AppGroup]()
     
     fileprivate func fetchData(){
-        Service.shared.fetchGames { (appGroup, err) in
-            if let err = err {
-                print("Failed to fetch fames: ", err)
-                return
+        
+        Service.shared.fetchAppGroup(urlString: "https://rss.itunes.apple.com/api/v1/br/ios-apps/top-paid/all/50/explicit.json") { (appGroup, err) in
+            if let group = appGroup {
+                self.groups.append(group)
+
             }
-            self.editorsChoiceGames = appGroup
+            
+            DispatchQueue.main.sync {
+                self.collectionView.reloadData()
+            }
+        }
+
+        Service.shared.fetchAppGroup(urlString: "https://rss.itunes.apple.com/api/v1/br/ios-apps/top-free/all/50/explicit.json") { (appGroup, err) in
+            if let group = appGroup {
+                self.groups.append(group)
+
+            }
+            
+            DispatchQueue.main.sync {
+                self.collectionView.reloadData()
+            }
+        }
+        
+        Service.shared.fetchAppGroup(urlString: "https://rss.itunes.apple.com/api/v1/br/ios-apps/top-grossing/all/50/explicit.json") { (appGroup, err) in
+            if let group = appGroup {
+                self.groups.append(group)
+
+            }
+            
             DispatchQueue.main.sync {
                 self.collectionView.reloadData()
             }
         }
     }
+    
+    
     
  
     

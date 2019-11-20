@@ -22,7 +22,7 @@
 		A5BA831C235A9688004635B3 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BA831B235A9688004635B3 /* BaseTabBarController.swift */; };
 		A5EB194A235B4FC90005D8A3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB1949235B4FC90005D8A3 /* SearchViewController.swift */; };
 		A5EB194C235B51FA0005D8A3 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB194B235B51FA0005D8A3 /* TodayViewController.swift */; };
-		A5EB194E235B52170005D8A3 /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB194D235B52170005D8A3 /* AppsViewController.swift */; };
+		A5EB194E235B52170005D8A3 /* AppsPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB194D235B52170005D8A3 /* AppsPageController.swift */; };
 		EC01B9D6237B71FF00E704E6 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC01B9D5237B71FF00E704E6 /* AppGroup.swift */; };
 		EC0A69A2236DD61F00887123 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A1236DD61F00887123 /* BaseListController.swift */; };
 		EC0A69A7236DDCBB00887123 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */; };
@@ -80,7 +80,7 @@
 		A5BA831B235A9688004635B3 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		A5EB1949235B4FC90005D8A3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A5EB194B235B51FA0005D8A3 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		A5EB194D235B52170005D8A3 /* AppsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsViewController.swift; sourceTree = "<group>"; };
+		A5EB194D235B52170005D8A3 /* AppsPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageController.swift; sourceTree = "<group>"; };
 		C1F12684C55D2FC4169E7458 /* Pods-AppStore Using JSON API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore Using JSON API.debug.xcconfig"; path = "Target Support Files/Pods-AppStore Using JSON API/Pods-AppStore Using JSON API.debug.xcconfig"; sourceTree = "<group>"; };
 		D29929AA46C039201477F327 /* Pods-AppStore Using JSON APIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore Using JSON APIUITests.release.xcconfig"; path = "Target Support Files/Pods-AppStore Using JSON APIUITests/Pods-AppStore Using JSON APIUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EC01B9D5237B71FF00E704E6 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 		EC0A69A0236DD5FF00887123 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
-				A5EB194D235B52170005D8A3 /* AppsViewController.swift */,
+				A5EB194D235B52170005D8A3 /* AppsPageController.swift */,
 				EC0A69AC236DFC3600887123 /* AppsHorizontalController.swift */,
 				EC4B783C2378498200F3FAF7 /* AppsHeaderController.swift */,
 			);
@@ -368,6 +368,7 @@
 				TargetAttributes = {
 					A5BA82E9235A95F2004635B3 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1120;
 					};
 					A5BA82FD235A95F5004635B3 = {
 						CreatedOnToolsVersion = 10.3;
@@ -526,7 +527,7 @@
 				A5BA82F0235A95F2004635B3 /* ViewController.swift in Sources */,
 				A50230EE236120DD00D55C4D /* SearchResult.swift in Sources */,
 				A5BA82EE235A95F2004635B3 /* AppDelegate.swift in Sources */,
-				A5EB194E235B52170005D8A3 /* AppsViewController.swift in Sources */,
+				A5EB194E235B52170005D8A3 /* AppsPageController.swift in Sources */,
 				EC0A69AB236DF67C00887123 /* UIView+Layout.swift in Sources */,
 				EC4B783B2378457B00F3FAF7 /* AppsPageHeader.swift in Sources */,
 				A50230F12361296A00D55C4D /* Service.swift in Sources */,
