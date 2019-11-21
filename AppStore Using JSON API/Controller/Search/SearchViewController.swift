@@ -58,15 +58,12 @@ class SearchViewController: BaseListController, UICollectionViewDelegateFlowLayo
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        view.addSubview(progressLoadIndicator)
-        progressLoadIndicator.fillSuperview()
         
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
             Service.shared.fetchApps(searchTerm: searchText) { (res, err) in
                 self.appResults = res
                 DispatchQueue.main.async {
-                    self.progressLoadIndicator.stopAnimating()
                     self.collectionView.reloadData()
                 }
                 
