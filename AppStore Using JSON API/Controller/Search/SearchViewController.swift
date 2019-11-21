@@ -12,15 +12,27 @@ class SearchViewController: BaseListController, UICollectionViewDelegateFlowLayo
 
     fileprivate let cellID = "cell"
     fileprivate let searchController = UISearchController(searchResultsController: nil)
+    
+    let progressLoadIndicator: UIActivityIndicatorView = {
+        let progress = UIActivityIndicatorView()
+        progress.color = .black
+        progress.startAnimating()
+        progress.hidesWhenStopped = true
+        return progress
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         collectionView.backgroundColor = .white
         collectionView.register(SearchResultCell.self, forCellWithReuseIdentifier: cellID)
         collectionView.addSubview(enterSearchTermLabel)
         enterSearchTermLabel.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor, constant: 50).isActive = true
         enterSearchTermLabel.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor, constant: -50).isActive = true
         enterSearchTermLabel.topAnchor.constraint(equalTo: collectionView.topAnchor, constant: 100).isActive = true
+        
+        
+        
         setupSearchBar()
 
     }
@@ -46,11 +58,15 @@ class SearchViewController: BaseListController, UICollectionViewDelegateFlowLayo
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
+        view.addSubview(progressLoadIndicator)
+        progressLoadIndicator.fillSuperview()
+        
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
             Service.shared.fetchApps(searchTerm: searchText) { (res, err) in
                 self.appResults = res
                 DispatchQueue.main.async {
+                    self.progressLoadIndicator.stopAnimating()
                     self.collectionView.reloadData()
                 }
                 
