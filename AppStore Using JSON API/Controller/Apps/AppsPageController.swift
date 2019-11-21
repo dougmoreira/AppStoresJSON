@@ -12,6 +12,14 @@ import SDWebImage
 let headerID = "headerID"
 
 class AppsPageController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
+    let activityIndicatorView: UIActivityIndicatorView = {
+        let aiv = UIActivityIndicatorView(style: .whiteLarge)
+        aiv.color = .black
+        aiv.startAnimating()
+        aiv.hidesWhenStopped = true
+        return aiv
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +28,10 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
         collectionView.register(AppsGroupCell.self, forCellWithReuseIdentifier: "id")
         collectionView.register(AppsPageHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
         
+        view.addSubview(activityIndicatorView)
+        activityIndicatorView.fillSuperview()
         fetchData()
     }
-    
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath) as! AppsPageHeader
@@ -56,9 +65,7 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .init(top: 16, left: 0, bottom: 0, right: 0)
     }
-    
-//    var editorsChoiceGames: AppGroup?
-    
+        
     var groups = [AppGroup]()
     var appsHeaderModelResult = [AppsHeaderModel]()
     
@@ -112,6 +119,8 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
         dispatchGroup.notify(queue: .main) {
             print("complete dispatch group tasks...")
             
+            self.activityIndicatorView.stopAnimating()
+            
             if let group = topFreeAppsGroup{
                 self.groups.append(group)
             }
@@ -125,10 +134,6 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
             self.collectionView.reloadData()
         }
     }
-    
-    
-    
- 
     
     init(){
          super.init(collectionViewLayout: UICollectionViewFlowLayout())
