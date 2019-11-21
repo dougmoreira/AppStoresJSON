@@ -10,6 +10,8 @@ import UIKit
 
 class AppsHeaderController: BaseListController, UICollectionViewDelegateFlowLayout {
     
+    var headerAppsModelResults = [AppsHeaderModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,11 +25,15 @@ class AppsHeaderController: BaseListController, UICollectionViewDelegateFlowLayo
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return headerAppsModelResults.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! AppsHeaderCell
+        let result = self.headerAppsModelResults[indexPath.item]
+        cell.appNameLabel.text = result.name
+        cell.appImageView.sd_setImage(with: URL(string: result.imageUrl))
+        cell.appDescriptionLabel.text = result.tagline
         return cell
     }
     

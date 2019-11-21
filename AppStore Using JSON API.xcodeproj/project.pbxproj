@@ -33,6 +33,7 @@
 		EC4B783D2378498200F3FAF7 /* AppsHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4B783C2378498200F3FAF7 /* AppsHeaderController.swift */; };
 		EC4B783F237852EE00F3FAF7 /* AppsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4B783E237852EE00F3FAF7 /* AppsHeaderCell.swift */; };
 		EC58A03C23721ED700901990 /* AppsRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58A03B23721ED700901990 /* AppsRowCell.swift */; };
+		ECFB4872238743270082D34C /* AppsHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFB4871238743270082D34C /* AppsHeaderModel.swift */; };
 		F67A329C06C119D24A2A6A03 /* Pods_AppStore_Using_JSON_APIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF6560647F00EFC60AB0A3A /* Pods_AppStore_Using_JSON_APIUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		EC4B783C2378498200F3FAF7 /* AppsHeaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderController.swift; sourceTree = "<group>"; };
 		EC4B783E237852EE00F3FAF7 /* AppsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCell.swift; sourceTree = "<group>"; };
 		EC58A03B23721ED700901990 /* AppsRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsRowCell.swift; sourceTree = "<group>"; };
+		ECFB4871238743270082D34C /* AppsHeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				A50230ED236120DD00D55C4D /* SearchResult.swift */,
 				EC01B9D5237B71FF00E704E6 /* AppGroup.swift */,
+				ECFB4871238743270082D34C /* AppsHeaderModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				EC4B783D2378498200F3FAF7 /* AppsHeaderController.swift in Sources */,
 				A5EB194A235B4FC90005D8A3 /* SearchViewController.swift in Sources */,
 				A5BA831C235A9688004635B3 /* BaseTabBarController.swift in Sources */,
+				ECFB4872238743270082D34C /* AppsHeaderModel.swift in Sources */,
 				EC0A69AD236DFC3600887123 /* AppsHorizontalController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

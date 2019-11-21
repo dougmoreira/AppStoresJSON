@@ -25,7 +25,9 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
     
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath)
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath) as! AppsPageHeader
+        header.headerHorizontalController.headerAppsModelResults = self.appsHeaderModelResult
+        header.headerHorizontalController.collectionView.reloadData()
         return header
     }
     
@@ -58,6 +60,7 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
 //    var editorsChoiceGames: AppGroup?
     
     var groups = [AppGroup]()
+    var appsHeaderModelResult = [AppsHeaderModel]()
     
     fileprivate func fetchData(){
         
@@ -66,6 +69,13 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
         var topGrossingAppsGroup: AppGroup?
         
         let dispatchGroup = DispatchGroup()
+        
+        dispatchGroup.enter()
+        Service.shared.fetchHeaderApps { (apps, err) in
+            dispatchGroup.leave()
+            self.appsHeaderModelResult = apps ?? []
+            //acima estou armazenando todo o resultado que esta dentro de apps denro da minha variavel Model
+        }
         
         dispatchGroup.enter()
         Service.shared.fetchAppGroup(urlString: "https://rss.itunes.apple.com/api/v1/br/ios-apps/top-free/all/50/explicit.json") { (appGroup, err) in
