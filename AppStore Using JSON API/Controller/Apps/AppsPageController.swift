@@ -55,6 +55,12 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
         cell.titleSectionLabel.text = appGroup.feed.title
         cell.horizontalController.appGroup = appGroup
         cell.horizontalController.collectionView.reloadData()
+        cell.horizontalController.didSelecHandler = { FeedResult in
+            
+            let controller = AppDetailPageViewController()
+            self.navigationController?.pushViewController(controller, animated: true)
+            controller.navigationItem.title = FeedResult.name
+        }
         return cell
     }
     

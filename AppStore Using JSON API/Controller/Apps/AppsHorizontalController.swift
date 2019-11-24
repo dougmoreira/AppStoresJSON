@@ -15,6 +15,13 @@ class AppsHorizontalController: BaseListController, UICollectionViewDelegateFlow
     
 
     var appGroup: AppGroup?
+    var didSelecHandler: ((FeedResult) -> ())?
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let app = appGroup?.feed.results[indexPath.item]{
+            didSelecHandler?(app)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,4 +58,6 @@ class AppsHorizontalController: BaseListController, UICollectionViewDelegateFlow
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .init(top: 8, left: 12, bottom: 0, right: 0)
     }
+    
+    
 }
