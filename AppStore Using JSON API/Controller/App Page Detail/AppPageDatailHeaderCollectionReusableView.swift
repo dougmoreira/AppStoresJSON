@@ -9,24 +9,14 @@
 import UIKit
 
 class AppPageDatailHeaderCollectionReusableView: UICollectionReusableView {
-    @IBOutlet var HeaderCollectionView: AppPageDatailHeaderCollectionReusableView!
+    
+    @IBOutlet weak var headerStackView: UIStackView!
+    @IBOutlet weak var StackViewInterno: UIStackView!
+    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var imageProfile: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
-    }
-    
-    static var filename: String{
-        return String(describing: self)
-    }
-    
-    static var nib: UINib{
-        return UINib(nibName: filename, bundle: nil)
-    }
-    
-    static var headerCell: String{
-        return "header"
     }
     
 }
