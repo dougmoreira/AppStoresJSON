@@ -57,7 +57,7 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
         cell.horizontalController.collectionView.reloadData()
         cell.horizontalController.didSelecHandler = { FeedResult in
             
-            let controller = AppDetailPageViewController()
+            let controller = AppPageDetailCollectionViewController()
             self.navigationController?.pushViewController(controller, animated: true)
             controller.navigationItem.title = FeedResult.name
         }
