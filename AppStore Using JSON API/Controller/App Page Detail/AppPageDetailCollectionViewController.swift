@@ -8,48 +8,50 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
 
 class AppPageDetailCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.backgroundColor = .white
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellID)
+        collectionView.register(AppPageDatailHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
 
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        self.collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath)
-        header.backgroundColor = .blue
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath) as! AppPageDatailHeaderCollectionReusableView
+//        header.backgroundColor = .yellow
         return header
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return .init(width: view.frame.width, height: 460)
+        return .init(width: view.frame.width, height: 300)
     }
-
-
-//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
-
+ 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return .init(width: view.frame.width, height: 460)
+    }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        cell.backgroundColor = .systemPink
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
+        cell.backgroundColor = .lightGray
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.frame.width, height: 300)
+    
+    init(){
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
-    
-    
+
 }

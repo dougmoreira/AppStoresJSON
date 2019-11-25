@@ -19,8 +19,11 @@ class AppsHorizontalController: BaseListController, UICollectionViewDelegateFlow
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let app = appGroup?.feed.results[indexPath.item]{
+            print("Clicou em \(app.name)")
             didSelecHandler?(app)
         }
+        
+        
     }
     
     override func viewDidLoad() {

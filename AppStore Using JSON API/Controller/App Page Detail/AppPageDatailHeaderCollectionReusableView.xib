@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppPageDatailHeaderCollectionReusableView" customModule="AppStore_Using_JSON_API" customModuleProvider="target">
+            <connections>
+                <outlet property="HeaderCollectionView" destination="U6b-Vx-4bR" id="Xlo-TS-SC3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header" id="U6b-Vx-4bR" customClass="AppPageDatailHeaderCollectionReusableView" customModule="AppStore_Using_JSON_API" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rnd-10-eFh">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6sK-bd-tB6">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nsA-Iq-iCE">
+                                    <rect key="frame" x="0.0" y="0.0" width="239.5" height="50"/>
+                                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVd-4a-rbO">
+                                    <rect key="frame" x="239.5" y="0.0" width="80.5" height="50"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rnd-10-eFh" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="cuk-bg-PSV"/>
+                <constraint firstAttribute="bottom" secondItem="rnd-10-eFh" secondAttribute="bottom" id="dkF-Y0-8pJ"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="rnd-10-eFh" secondAttribute="trailing" id="scD-UL-FkF"/>
+                <constraint firstItem="rnd-10-eFh" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="sdy-rK-63X"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <point key="canvasLocation" x="-68.115942028985515" y="-36.830357142857139"/>
+        </collectionReusableView>
+    </objects>
+</document>
