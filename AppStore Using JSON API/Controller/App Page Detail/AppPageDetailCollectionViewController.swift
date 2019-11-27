@@ -15,10 +15,16 @@ class AppPageDetailCollectionViewController: UICollectionViewController, UIColle
         super.viewDidLoad()
         
         collectionView.backgroundColor = .white
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellID)
+        collectionView.register(AppDetailCollectionViewCell.self, forCellWithReuseIdentifier: cellID)
+        
         collectionView.register(AppPageDatailHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
+        
+//        let nib = UINib.init(nibName: "AppPageDatailHeaderCollectionReusableView", bundle: nil)
+//        collectionView.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
 
     }
+    
+    
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath) as! AppPageDatailHeaderCollectionReusableView
@@ -39,8 +45,8 @@ class AppPageDetailCollectionViewController: UICollectionViewController, UIColle
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
-        cell.backgroundColor = .lightGray
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! AppDetailCollectionViewCell
+//        cell.backgroundColor = .lightGray
         return cell
     }
     

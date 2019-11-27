@@ -36,6 +36,8 @@
 		EC4B783F237852EE00F3FAF7 /* AppsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4B783E237852EE00F3FAF7 /* AppsHeaderCell.swift */; };
 		EC547BF4238C5ADE00637179 /* AppPageDetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC547BF2238C5ADE00637179 /* AppPageDetailCollectionViewController.swift */; };
 		EC58A03C23721ED700901990 /* AppsRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC58A03B23721ED700901990 /* AppsRowCell.swift */; };
+		ECB627F1238DD8D3006EE993 /* AppDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB627EF238DD8D3006EE993 /* AppDetailCollectionViewCell.swift */; };
+		ECB627F2238DD8D3006EE993 /* AppDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECB627F0238DD8D3006EE993 /* AppDetailCollectionViewCell.xib */; };
 		ECFB4872238743270082D34C /* AppsHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFB4871238743270082D34C /* AppsHeaderModel.swift */; };
 		F67A329C06C119D24A2A6A03 /* Pods_AppStore_Using_JSON_APIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF6560647F00EFC60AB0A3A /* Pods_AppStore_Using_JSON_APIUITests.framework */; };
 /* End PBXBuildFile section */
@@ -100,6 +102,8 @@
 		EC4B783E237852EE00F3FAF7 /* AppsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCell.swift; sourceTree = "<group>"; };
 		EC547BF2238C5ADE00637179 /* AppPageDetailCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPageDetailCollectionViewController.swift; sourceTree = "<group>"; };
 		EC58A03B23721ED700901990 /* AppsRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsRowCell.swift; sourceTree = "<group>"; };
+		ECB627EF238DD8D3006EE993 /* AppDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		ECB627F0238DD8D3006EE993 /* AppDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		ECFB4871238743270082D34C /* AppsHeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -293,6 +297,8 @@
 				EC547BF2238C5ADE00637179 /* AppPageDetailCollectionViewController.swift */,
 				EC38B98D238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.swift */,
 				EC38B98E238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.xib */,
+				ECB627EF238DD8D3006EE993 /* AppDetailCollectionViewCell.swift */,
+				ECB627F0238DD8D3006EE993 /* AppDetailCollectionViewCell.xib */,
 			);
 			path = "App Page Detail";
 			sourceTree = "<group>";
@@ -425,6 +431,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB627F2238DD8D3006EE993 /* AppDetailCollectionViewCell.xib in Resources */,
 				A5BA82F8235A95F5004635B3 /* LaunchScreen.storyboard in Resources */,
 				EC38B990238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.xib in Resources */,
 				A5BA82F5235A95F5004635B3 /* Assets.xcassets in Resources */,
@@ -556,6 +563,7 @@
 				A50230F12361296A00D55C4D /* Service.swift in Sources */,
 				EC0A69A9236DE33B00887123 /* Extentions.swift in Sources */,
 				A5EB194C235B51FA0005D8A3 /* TodayViewController.swift in Sources */,
+				ECB627F1238DD8D3006EE993 /* AppDetailCollectionViewCell.swift in Sources */,
 				EC4B783D2378498200F3FAF7 /* AppsHeaderController.swift in Sources */,
 				A5EB194A235B4FC90005D8A3 /* SearchViewController.swift in Sources */,
 				A5BA831C235A9688004635B3 /* BaseTabBarController.swift in Sources */,

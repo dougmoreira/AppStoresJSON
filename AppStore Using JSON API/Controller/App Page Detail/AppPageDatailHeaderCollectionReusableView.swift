@@ -10,13 +10,27 @@ import UIKit
 
 class AppPageDatailHeaderCollectionReusableView: UICollectionReusableView {
     
-    @IBOutlet weak var headerStackView: UIStackView!
-    @IBOutlet weak var StackViewInterno: UIStackView!
-    @IBOutlet weak var labelName: UILabel!
-    @IBOutlet weak var imageProfile: UIImageView!
+    @IBOutlet weak var mainView: UIView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
     }
-    
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+
+    func commonInit() {
+        let bundle = Bundle.init(for: AppPageDatailHeaderCollectionReusableView.self)
+        if let viewsToAdd = bundle.loadNibNamed("AppPageDatailHeaderCollectionReusableView", owner: self, options: nil), let contentView = viewsToAdd.first as? UIView {
+            addSubview(contentView)
+            contentView.frame = self.bounds
+            contentView.autoresizingMask = [.flexibleHeight,
+                                            .flexibleWidth]
+        }
+
+    }
+
 }
