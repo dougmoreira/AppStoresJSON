@@ -15,20 +15,18 @@ class AppPageDetailCollectionViewController: UICollectionViewController, UIColle
         super.viewDidLoad()
         
         collectionView.backgroundColor = .white
-        collectionView.register(AppDetailCollectionViewCell.self, forCellWithReuseIdentifier: cellID)
+        collectionView.register(AppDetailPreviewCollectionViewCell.self, forCellWithReuseIdentifier: "previewCell")
+        
+        let nibCell = UINib(nibName: "AppDetailPreviewCollectionViewCell", bundle: nil)
+        
+        collectionView.register(nibCell, forCellWithReuseIdentifier: "AppDetailPreviewCollectionViewCell")
         
         collectionView.register(AppPageDatailHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
-        
-//        let nib = UINib.init(nibName: "AppPageDatailHeaderCollectionReusableView", bundle: nil)
-//        collectionView.register(nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
-
     }
-    
     
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath) as! AppPageDatailHeaderCollectionReusableView
-//        header.backgroundColor = .yellow
         return header
     }
     
@@ -45,8 +43,7 @@ class AppPageDetailCollectionViewController: UICollectionViewController, UIColle
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! AppDetailCollectionViewCell
-//        cell.backgroundColor = .lightGray
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AppDetailPreviewCollectionViewCell", for: indexPath)
         return cell
     }
     

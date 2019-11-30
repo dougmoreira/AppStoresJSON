@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppPageDatailHeaderCollectionReusableView" customModule="AppStore_Using_JSON_API" customModuleProvider="target">
             <connections>
+                <outlet property="AppNameLabel" destination="d7O-1b-GXi" id="Kqe-3k-k3K"/>
                 <outlet property="mainView" destination="0ha-Xf-qnZ" id="MNs-J1-4EO"/>
             </connections>
         </placeholder>
