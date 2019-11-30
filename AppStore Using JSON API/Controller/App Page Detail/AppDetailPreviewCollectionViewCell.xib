@@ -17,33 +17,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="379" height="141"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1H-8w-HIP">
-                        <rect key="frame" x="175" y="60" width="29" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n20-w0-QNj">
-                        <rect key="frame" x="10" y="10" width="60" height="60"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="60" id="73J-HX-Bif"/>
-                            <constraint firstAttribute="height" constant="60" id="TeA-eV-D3c"/>
-                        </constraints>
-                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaJ-yg-6Oe">
+                        <rect key="frame" x="0.0" y="0.0" width="379" height="141"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="r1H-8w-HIP" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="EL6-tR-cZl"/>
-                <constraint firstItem="n20-w0-QNj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Woh-BZ-pez"/>
-                <constraint firstItem="n20-w0-QNj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="pHW-Rk-yaL"/>
-                <constraint firstItem="r1H-8w-HIP" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="tFI-wj-vaj"/>
+                <constraint firstAttribute="trailing" secondItem="BaJ-yg-6Oe" secondAttribute="trailing" id="2GN-Hx-VsQ"/>
+                <constraint firstItem="BaJ-yg-6Oe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KRu-Mk-wOE"/>
+                <constraint firstItem="BaJ-yg-6Oe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="N9h-IB-Gmn"/>
+                <constraint firstAttribute="bottom" secondItem="BaJ-yg-6Oe" secondAttribute="bottom" id="he0-Mp-epD"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="379" height="141"/>
             <connections>
-                <outlet property="imageLabel" destination="n20-w0-QNj" id="U0L-cH-UTC"/>
-                <outlet property="textLabel" destination="r1H-8w-HIP" id="Hq7-2y-Uq1"/>
+                <outlet property="mainView" destination="BaJ-yg-6Oe" id="5zQ-4o-lyd"/>
             </connections>
             <point key="canvasLocation" x="192.0289855072464" y="142.96875"/>
         </collectionViewCell>

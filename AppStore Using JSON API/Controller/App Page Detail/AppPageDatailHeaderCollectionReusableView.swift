@@ -11,13 +11,11 @@ import UIKit
 class AppPageDatailHeaderCollectionReusableView: UICollectionReusableView {
     
     @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var AppNameLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
         
-        AppNameLabel.text = "Oi Douglasssss"
     }
 
     required init?(coder aDecoder: NSCoder) {

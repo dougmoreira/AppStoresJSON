@@ -9,8 +9,8 @@
 import UIKit
 
 class AppDetailPreviewCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var imageLabel: UIImageView!
-    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var mainView: UIView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
