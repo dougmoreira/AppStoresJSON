@@ -18,8 +18,8 @@ class AppPageDetailCollectionViewController: UICollectionViewController, UIColle
         collectionView.register(AppDetailImageViewCollectionViewCell.self, forCellWithReuseIdentifier: "previewCell")
         collectionView.register(AppPageDatailHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
         
-//        let footerNib = UINib(nibName: "AppDetailComentsCollectionReusableView", bundle: nil)
-        collectionView.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "AppDetailComentsCollectionReusableView")
+        let footerNib = UINib(nibName: "AppDetailFooterCollectionViewCell", bundle: nil)
+        collectionView.register(footerNib.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "AppDetailComentsCollectionReusableView")
     }
     
     
@@ -28,8 +28,8 @@ class AppPageDetailCollectionViewController: UICollectionViewController, UIColle
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath) as! AppPageDatailHeaderCollectionReusableView
             return header
         }else{
-            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "AppDetailComentsCollectionReusableView", for: indexPath) as! UICollectionViewCell
-            footer.backgroundColor = .lightGray
+            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "AppDetailComentsCollectionReusableView", for: indexPath)
+//            footer.backgroundColor = .lightGray
             
             return footer
         }
