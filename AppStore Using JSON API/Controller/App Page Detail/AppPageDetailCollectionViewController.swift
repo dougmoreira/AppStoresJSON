@@ -15,12 +15,8 @@ class AppPageDetailCollectionViewController: UICollectionViewController, UIColle
         super.viewDidLoad()
         
         collectionView.backgroundColor = .white
-        collectionView.register(AppDetailPreviewCollectionViewCell.self, forCellWithReuseIdentifier: "previewCell")
-        
-        let nibCell = UINib(nibName: "AppDetailPreviewCollectionViewCell", bundle: nil)
-        
-        collectionView.register(nibCell, forCellWithReuseIdentifier: "AppDetailPreviewCollectionViewCell")
-        
+        collectionView.register(AppDetailImageViewCollectionViewCell.self, forCellWithReuseIdentifier: "previewCell")
+
         collectionView.register(AppPageDatailHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
     }
     
@@ -43,7 +39,7 @@ class AppPageDetailCollectionViewController: UICollectionViewController, UIColle
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AppDetailPreviewCollectionViewCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "previewCell", for: indexPath) as! AppDetailImageViewCollectionViewCell
         return cell
     }
     
