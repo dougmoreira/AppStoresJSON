@@ -23,6 +23,8 @@
 		A5EB194A235B4FC90005D8A3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB1949235B4FC90005D8A3 /* SearchViewController.swift */; };
 		A5EB194C235B51FA0005D8A3 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB194B235B51FA0005D8A3 /* TodayViewController.swift */; };
 		A5EB194E235B52170005D8A3 /* AppsPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB194D235B52170005D8A3 /* AppsPageController.swift */; };
+		EC018C04239472700051AE60 /* AppDetailComentsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC018C02239472700051AE60 /* AppDetailComentsCollectionReusableView.swift */; };
+		EC018C05239472700051AE60 /* AppDetailComentsCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC018C03239472700051AE60 /* AppDetailComentsCollectionReusableView.xib */; };
 		EC01B9D6237B71FF00E704E6 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC01B9D5237B71FF00E704E6 /* AppGroup.swift */; };
 		EC0A69A2236DD61F00887123 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A1236DD61F00887123 /* BaseListController.swift */; };
 		EC0A69A7236DDCBB00887123 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */; };
@@ -89,6 +91,8 @@
 		A5EB194D235B52170005D8A3 /* AppsPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageController.swift; sourceTree = "<group>"; };
 		C1F12684C55D2FC4169E7458 /* Pods-AppStore Using JSON API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore Using JSON API.debug.xcconfig"; path = "Target Support Files/Pods-AppStore Using JSON API/Pods-AppStore Using JSON API.debug.xcconfig"; sourceTree = "<group>"; };
 		D29929AA46C039201477F327 /* Pods-AppStore Using JSON APIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore Using JSON APIUITests.release.xcconfig"; path = "Target Support Files/Pods-AppStore Using JSON APIUITests/Pods-AppStore Using JSON APIUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EC018C02239472700051AE60 /* AppDetailComentsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailComentsCollectionReusableView.swift; sourceTree = "<group>"; };
+		EC018C03239472700051AE60 /* AppDetailComentsCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppDetailComentsCollectionReusableView.xib; sourceTree = "<group>"; };
 		EC01B9D5237B71FF00E704E6 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		EC0A69A1236DD61F00887123 /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
 		EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
@@ -299,6 +303,8 @@
 				EC38B98E238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.xib */,
 				ECBB7F3A2394110F0005289F /* AppPageHorizontalPreviewImageCollectionViewController.swift */,
 				ECBB7F3C2394124F0005289F /* AppDetailImageViewCollectionViewCell.swift */,
+				EC018C02239472700051AE60 /* AppDetailComentsCollectionReusableView.swift */,
+				EC018C03239472700051AE60 /* AppDetailComentsCollectionReusableView.xib */,
 			);
 			path = "App Page Detail";
 			sourceTree = "<group>";
@@ -435,6 +441,7 @@
 				EC38B990238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.xib in Resources */,
 				A5BA82F5235A95F5004635B3 /* Assets.xcassets in Resources */,
 				A5BA82F3235A95F2004635B3 /* Main.storyboard in Resources */,
+				EC018C05239472700051AE60 /* AppDetailComentsCollectionReusableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +575,7 @@
 				A5EB194A235B4FC90005D8A3 /* SearchViewController.swift in Sources */,
 				A5BA831C235A9688004635B3 /* BaseTabBarController.swift in Sources */,
 				ECFB4872238743270082D34C /* AppsHeaderModel.swift in Sources */,
+				EC018C04239472700051AE60 /* AppDetailComentsCollectionReusableView.swift in Sources */,
 				EC0A69AD236DFC3600887123 /* AppsHorizontalController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
