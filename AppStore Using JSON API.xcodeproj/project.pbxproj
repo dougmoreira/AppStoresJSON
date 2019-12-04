@@ -31,6 +31,8 @@
 		EC0A69A9236DE33B00887123 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A8236DE33B00887123 /* Extentions.swift */; };
 		EC0A69AB236DF67C00887123 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69AA236DF67C00887123 /* UIView+Layout.swift */; };
 		EC0A69AD236DFC3600887123 /* AppsHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69AC236DFC3600887123 /* AppsHorizontalController.swift */; };
+		EC2B374B2398726A0023FE1F /* HorizontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2B374A2398726A0023FE1F /* HorizontalSnappingController.swift */; };
+		EC2B374D23987AF80023FE1F /* SnappingLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2B374C23987AF80023FE1F /* SnappingLayoutHelper.swift */; };
 		EC38B98F238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC38B98D238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.swift */; };
 		EC38B990238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC38B98E238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.xib */; };
 		EC4B783B2378457B00F3FAF7 /* AppsPageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4B783A2378457B00F3FAF7 /* AppsPageHeader.swift */; };
@@ -99,6 +101,8 @@
 		EC0A69A8236DE33B00887123 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		EC0A69AA236DF67C00887123 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		EC0A69AC236DFC3600887123 /* AppsHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHorizontalController.swift; sourceTree = "<group>"; };
+		EC2B374A2398726A0023FE1F /* HorizontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingController.swift; sourceTree = "<group>"; };
+		EC2B374C23987AF80023FE1F /* SnappingLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnappingLayoutHelper.swift; sourceTree = "<group>"; };
 		EC38B98D238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPageDatailHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		EC38B98E238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppPageDatailHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		EC4B783A2378457B00F3FAF7 /* AppsPageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageHeader.swift; sourceTree = "<group>"; };
@@ -264,6 +268,7 @@
 				A5EB194D235B52170005D8A3 /* AppsPageController.swift */,
 				EC0A69AC236DFC3600887123 /* AppsHorizontalController.swift */,
 				EC4B783C2378498200F3FAF7 /* AppsHeaderController.swift */,
+				EC2B374A2398726A0023FE1F /* HorizontalSnappingController.swift */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 				EC0A69A8236DE33B00887123 /* Extentions.swift */,
 				EC0A69A1236DD61F00887123 /* BaseListController.swift */,
 				EC0A69AA236DF67C00887123 /* UIView+Layout.swift */,
+				EC2B374C23987AF80023FE1F /* SnappingLayoutHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -559,11 +565,13 @@
 				ECBB7F3B2394110F0005289F /* AppPageHorizontalPreviewImageCollectionViewController.swift in Sources */,
 				EC58A03C23721ED700901990 /* AppsRowCell.swift in Sources */,
 				EC01B9D6237B71FF00E704E6 /* AppGroup.swift in Sources */,
+				EC2B374B2398726A0023FE1F /* HorizontalSnappingController.swift in Sources */,
 				EC0A69A7236DDCBB00887123 /* AppsGroupCell.swift in Sources */,
 				EC4B783F237852EE00F3FAF7 /* AppsHeaderCell.swift in Sources */,
 				A5BA82F0235A95F2004635B3 /* ViewController.swift in Sources */,
 				EC38B98F238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.swift in Sources */,
 				A50230EE236120DD00D55C4D /* SearchResult.swift in Sources */,
+				EC2B374D23987AF80023FE1F /* SnappingLayoutHelper.swift in Sources */,
 				A5BA82EE235A95F2004635B3 /* AppDelegate.swift in Sources */,
 				A5EB194E235B52170005D8A3 /* AppsPageController.swift in Sources */,
 				EC0A69AB236DF67C00887123 /* UIView+Layout.swift in Sources */,

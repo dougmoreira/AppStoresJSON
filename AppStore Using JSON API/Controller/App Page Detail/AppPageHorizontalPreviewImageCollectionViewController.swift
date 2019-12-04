@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class AppPageHorizontalPreviewImageCollectionViewController: BaseListController,  UICollectionViewDelegateFlowLayout{
+class AppPageHorizontalPreviewImageCollectionViewController: HorizontalSnappingController,  UICollectionViewDelegateFlowLayout{
 
     override func viewDidLoad() {
         super.viewDidLoad()

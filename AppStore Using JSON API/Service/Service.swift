@@ -12,30 +12,6 @@ import SDWebImage
 class Service {
     static let shared = Service() //singleton
     
-    
-    func fetchGenericJSONData <T: Decodable>(urlString: String, completion: @escaping (T?,Error?) -> ()){
-            
-            guard let url = URL(string: urlString) else {return}
-            
-            URLSession.shared.dataTask(with: url){ (data,resp,err) in
-                if let err = err{
-                    completion(nil,err)
-                    return
-                    
-                }
-                do{
-                    let objects = try JSONDecoder().decode(T.self, from: data!)
-                             completion(objects, nil)
-                         } catch{
-                             completion(nil, error)
-                             print("Failed to decode: ", error)
-                         }
-                
-                     }.resume() //will fire our request
-            }
-            
-    }
-    
     func fetchHeaderApps(completion: @escaping ([AppsHeaderModel]?,Error?) -> Void){
     let urlString = "https://api.letsbuildthatapp.com/appstore/social"
     fetchGenericJSONData(urlString: urlString, completion: completion)
@@ -90,6 +66,28 @@ class Service {
         
     }
 
+    func fetchGenericJSONData <T: Decodable>(urlString: String, completion: @escaping (T?,Error?) -> ()){
+            
+            guard let url = URL(string: urlString) else {return}
+            
+            URLSession.shared.dataTask(with: url){ (data,resp,err) in
+                if let err = err{
+                    completion(nil,err)
+                    return
+                    
+                }
+                do{
+                    let objects = try JSONDecoder().decode(T.self, from: data!)
+                             completion(objects, nil)
+                         } catch{
+                             completion(nil, error)
+                             print("Failed to decode: ", error)
+                         }
+                
+                     }.resume() //will fire our request
+            }
+            
+    }
 
 
 class Stack<T: Decodable>{
