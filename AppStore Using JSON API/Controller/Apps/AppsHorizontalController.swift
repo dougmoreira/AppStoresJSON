@@ -11,7 +11,7 @@ import UIKit
 let cellID = "id"
 
 
-class AppsHorizontalController: BaseListController, UICollectionViewDelegateFlowLayout{
+class AppsHorizontalController: HorizontalSnappingController, UICollectionViewDelegateFlowLayout{
     
 
     var appGroup: AppGroup?
@@ -22,17 +22,17 @@ class AppsHorizontalController: BaseListController, UICollectionViewDelegateFlow
             print("Clicou em \(app.name)")
             didSelecHandler?(app)
         }
-        
-        
+            
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         collectionView.register(AppsRowCell.self, forCellWithReuseIdentifier: cellID)
-        if let layout = collectionViewLayout as? UICollectionViewFlowLayout{
-            layout.scrollDirection = .horizontal
-        }
+        collectionView.isPagingEnabled = true
+        
+        collectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
+        
         
     }
     
@@ -55,12 +55,14 @@ class AppsHorizontalController: BaseListController, UICollectionViewDelegateFlow
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height = (view.frame.height - 4 * topBottomPadding - 2 * lineSpacing) / 3
-        return .init(width: view.frame.width - 64, height: height)
+        return .init(width: view.frame.width - 48, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .init(top: 8, left: 12, bottom: 0, right: 0)
+        return .init(top: topBottomPadding, left: 0, bottom: 0, right: 0)
     }
+    
+    
     
     
 }
