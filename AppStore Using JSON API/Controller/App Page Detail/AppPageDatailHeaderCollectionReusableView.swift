@@ -9,29 +9,17 @@
 import UIKit
 
 class AppPageDatailHeaderCollectionReusableView: UICollectionReusableView {
-    
-    @IBOutlet weak var mainView: UIView!
-    
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commonInit()
+        backgroundColor = .systemGray
         
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        commonInit()
     }
 
-    func commonInit() {
-        let bundle = Bundle.init(for: AppPageDatailHeaderCollectionReusableView.self)
-        if let viewsToAdd = bundle.loadNibNamed("AppPageDatailHeaderCollectionReusableView", owner: self, options: nil), let contentView = viewsToAdd.first as? UIView {
-            addSubview(contentView)
-            contentView.frame = self.bounds
-            contentView.autoresizingMask = [.flexibleHeight,
-                                            .flexibleWidth]
-        }
-
-    }
+  
 
 }

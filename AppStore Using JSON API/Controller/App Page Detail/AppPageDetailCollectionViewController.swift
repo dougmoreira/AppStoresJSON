@@ -11,28 +11,35 @@ import UIKit
 
 class AppPageDetailCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    let cellID = "cellID"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.backgroundColor = .white
-        collectionView.register(AppDetailImageViewCollectionViewCell.self, forCellWithReuseIdentifier: "previewCell")
-        collectionView.register(AppPageDatailHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerID)
         
-        let footerNib = UINib(nibName: "AppDetailFooterCollectionViewCell", bundle: nil)
-        collectionView.register(footerNib.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "AppDetailComentsCollectionReusableView")
+        collectionView.register(AppDetailImageViewCollectionViewCell.self, forCellWithReuseIdentifier: "previewCell")
+        collectionView.register(AppPageDatailHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: cellID)
+//        collectionView.register(AppDetailComentsCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: footerCell)
     }
     
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == UICollectionView.elementKindSectionHeader{
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath) as! AppPageDatailHeaderCollectionReusableView
-            return header
-        }else{
-            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "AppDetailComentsCollectionReusableView", for: indexPath)
+        
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: cellID, for: indexPath) as! AppPageDatailHeaderCollectionReusableView
+        return header
+        
+        
+//        if kind == UICollectionView.elementKindSectionHeader{
+//            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerCell, for: indexPath) as! AppPageDatailHeaderCollectionReusableView
+//            return header
+//        }else{
+//            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerCell, for: indexPath) as! AppDetailComentsCollectionReusableView
 //            footer.backgroundColor = .lightGray
-            
-            return footer
-        }
+//
+//            return footer
+//        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -53,9 +60,9 @@ class AppPageDetailCollectionViewController: UICollectionViewController, UIColle
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return .init(width: view.frame.width, height: 300)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+//        return .init(width: view.frame.width, height: 300)
+//    }
     
     
     init(){

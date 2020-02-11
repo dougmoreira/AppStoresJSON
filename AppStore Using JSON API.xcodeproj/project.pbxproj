@@ -23,8 +23,6 @@
 		A5EB194A235B4FC90005D8A3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB1949235B4FC90005D8A3 /* SearchViewController.swift */; };
 		A5EB194C235B51FA0005D8A3 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB194B235B51FA0005D8A3 /* TodayViewController.swift */; };
 		A5EB194E235B52170005D8A3 /* AppsPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB194D235B52170005D8A3 /* AppsPageController.swift */; };
-		EC018C0823947E7F0051AE60 /* AppDetailFooterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC018C0623947E7F0051AE60 /* AppDetailFooterCollectionViewCell.swift */; };
-		EC018C0923947E7F0051AE60 /* AppDetailFooterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC018C0723947E7F0051AE60 /* AppDetailFooterCollectionViewCell.xib */; };
 		EC01B9D6237B71FF00E704E6 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC01B9D5237B71FF00E704E6 /* AppGroup.swift */; };
 		EC0A69A2236DD61F00887123 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A1236DD61F00887123 /* BaseListController.swift */; };
 		EC0A69A7236DDCBB00887123 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */; };
@@ -34,7 +32,6 @@
 		EC2B374B2398726A0023FE1F /* HorizontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2B374A2398726A0023FE1F /* HorizontalSnappingController.swift */; };
 		EC2B374D23987AF80023FE1F /* SnappingLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2B374C23987AF80023FE1F /* SnappingLayoutHelper.swift */; };
 		EC38B98F238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC38B98D238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.swift */; };
-		EC38B990238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC38B98E238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.xib */; };
 		EC4B783B2378457B00F3FAF7 /* AppsPageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4B783A2378457B00F3FAF7 /* AppsPageHeader.swift */; };
 		EC4B783D2378498200F3FAF7 /* AppsHeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4B783C2378498200F3FAF7 /* AppsHeaderController.swift */; };
 		EC4B783F237852EE00F3FAF7 /* AppsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4B783E237852EE00F3FAF7 /* AppsHeaderCell.swift */; };
@@ -93,8 +90,6 @@
 		A5EB194D235B52170005D8A3 /* AppsPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageController.swift; sourceTree = "<group>"; };
 		C1F12684C55D2FC4169E7458 /* Pods-AppStore Using JSON API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore Using JSON API.debug.xcconfig"; path = "Target Support Files/Pods-AppStore Using JSON API/Pods-AppStore Using JSON API.debug.xcconfig"; sourceTree = "<group>"; };
 		D29929AA46C039201477F327 /* Pods-AppStore Using JSON APIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore Using JSON APIUITests.release.xcconfig"; path = "Target Support Files/Pods-AppStore Using JSON APIUITests/Pods-AppStore Using JSON APIUITests.release.xcconfig"; sourceTree = "<group>"; };
-		EC018C0623947E7F0051AE60 /* AppDetailFooterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailFooterCollectionViewCell.swift; sourceTree = "<group>"; };
-		EC018C0723947E7F0051AE60 /* AppDetailFooterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppDetailFooterCollectionViewCell.xib; sourceTree = "<group>"; };
 		EC01B9D5237B71FF00E704E6 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		EC0A69A1236DD61F00887123 /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
 		EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
@@ -104,7 +99,6 @@
 		EC2B374A2398726A0023FE1F /* HorizontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingController.swift; sourceTree = "<group>"; };
 		EC2B374C23987AF80023FE1F /* SnappingLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnappingLayoutHelper.swift; sourceTree = "<group>"; };
 		EC38B98D238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPageDatailHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
-		EC38B98E238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppPageDatailHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		EC4B783A2378457B00F3FAF7 /* AppsPageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPageHeader.swift; sourceTree = "<group>"; };
 		EC4B783C2378498200F3FAF7 /* AppsHeaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderController.swift; sourceTree = "<group>"; };
 		EC4B783E237852EE00F3FAF7 /* AppsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeaderCell.swift; sourceTree = "<group>"; };
@@ -306,11 +300,8 @@
 			children = (
 				EC547BF2238C5ADE00637179 /* AppPageDetailCollectionViewController.swift */,
 				EC38B98D238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.swift */,
-				EC38B98E238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.xib */,
 				ECBB7F3A2394110F0005289F /* AppPageHorizontalPreviewImageCollectionViewController.swift */,
 				ECBB7F3C2394124F0005289F /* AppDetailImageViewCollectionViewCell.swift */,
-				EC018C0623947E7F0051AE60 /* AppDetailFooterCollectionViewCell.swift */,
-				EC018C0723947E7F0051AE60 /* AppDetailFooterCollectionViewCell.xib */,
 			);
 			path = "App Page Detail";
 			sourceTree = "<group>";
@@ -443,9 +434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC018C0923947E7F0051AE60 /* AppDetailFooterCollectionViewCell.xib in Resources */,
 				A5BA82F8235A95F5004635B3 /* LaunchScreen.storyboard in Resources */,
-				EC38B990238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.xib in Resources */,
 				A5BA82F5235A95F5004635B3 /* Assets.xcassets in Resources */,
 				A5BA82F3235A95F2004635B3 /* Main.storyboard in Resources */,
 			);
@@ -560,7 +549,6 @@
 			files = (
 				EC0A69A2236DD61F00887123 /* BaseListController.swift in Sources */,
 				A529158B235E6960007E61F3 /* SearchResultCell.swift in Sources */,
-				EC018C0823947E7F0051AE60 /* AppDetailFooterCollectionViewCell.swift in Sources */,
 				EC547BF4238C5ADE00637179 /* AppPageDetailCollectionViewController.swift in Sources */,
 				ECBB7F3B2394110F0005289F /* AppPageHorizontalPreviewImageCollectionViewController.swift in Sources */,
 				EC58A03C23721ED700901990 /* AppsRowCell.swift in Sources */,
@@ -761,13 +749,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LUGZF59VK4;
+				DEVELOPMENT_TEAM = 3AM876BCDB;
 				INFOPLIST_FILE = "AppStore Using JSON API/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "douglas.AppStore-Using-JSON-API";
+				PRODUCT_BUNDLE_IDENTIFIER = douglas.AppStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -780,13 +768,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LUGZF59VK4;
+				DEVELOPMENT_TEAM = 3AM876BCDB;
 				INFOPLIST_FILE = "AppStore Using JSON API/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "douglas.AppStore-Using-JSON-API";
+				PRODUCT_BUNDLE_IDENTIFIER = douglas.AppStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
