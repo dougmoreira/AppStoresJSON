@@ -60,6 +60,8 @@ class AppsPageController: UICollectionViewController, UICollectionViewDelegateFl
             let controller = AppPageDetailCollectionViewController()
             self.navigationController?.pushViewController(controller, animated: true)
             controller.navigationItem.title = FeedResult.name
+            controller.appID = FeedResult.id
+            
         }
         return cell
     }

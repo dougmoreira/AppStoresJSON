@@ -12,7 +12,14 @@ import UIKit
 class AppPageDetailCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let cellID = "cellID"
-    
+    var appID: String! {
+        didSet{
+            let urlString = "http://itunes.apple.com/lookup?id=\(appID ?? "")"
+            Service.shared.fetchGenericJSONData(urlString: urlString) { (result: SearchResult?, err) in
+                print(result?.results.first?.description)
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +28,6 @@ class AppPageDetailCollectionViewController: UICollectionViewController, UIColle
         
         collectionView.register(AppDetailImageViewCollectionViewCell.self, forCellWithReuseIdentifier: "previewCell")
         collectionView.register(AppPageDatailHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: cellID)
-//        collectionView.register(AppDetailComentsCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: footerCell)
     }
     
     
@@ -30,16 +36,6 @@ class AppPageDetailCollectionViewController: UICollectionViewController, UIColle
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: cellID, for: indexPath) as! AppPageDatailHeaderCollectionReusableView
         return header
         
-        
-//        if kind == UICollectionView.elementKindSectionHeader{
-//            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerCell, for: indexPath) as! AppPageDatailHeaderCollectionReusableView
-//            return header
-//        }else{
-//            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerCell, for: indexPath) as! AppDetailComentsCollectionReusableView
-//            footer.backgroundColor = .lightGray
-//
-//            return footer
-//        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
