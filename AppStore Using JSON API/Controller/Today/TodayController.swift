@@ -8,11 +8,17 @@
 
 import UIKit
 
-final class TodayViewController: BaseListController, UICollectionViewDelegateFlowLayout {
+final class TodayController: BaseListController, UICollectionViewDelegateFlowLayout {
     
     private let cellID = "cellId"
     private var startingFrame: CGRect?
-    private var appFullScreenController: UIViewController!
+    private var appFullScreenController: TodayAppDetailTableViewController!
+    
+    private var topConstraint: NSLayoutConstraint?
+    private var leadingConstraint: NSLayoutConstraint?
+    private var widthConstraint: NSLayoutConstraint?
+    private var heightConstraint: NSLayoutConstraint?
+    
     
     let detailView: TodayAppDetailTableViewController = {
         let view = TodayAppDetailTableViewController()
@@ -54,6 +60,7 @@ final class TodayViewController: BaseListController, UICollectionViewDelegateFlo
         
         let appDetailFullScreen = TodayAppDetailTableViewController()
         let redView = appDetailFullScreen.view!
+        redView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(redView)
         
         addChild(appDetailFullScreen)
@@ -68,24 +75,47 @@ final class TodayViewController: BaseListController, UICollectionViewDelegateFlo
         self.startingFrame = startingFrame
         
         redView.layer.cornerRadius = 16
-        redView.frame = startingFrame
+//        redView.frame = startingFrame
+        topConstraint = redView.topAnchor.constraint(equalTo: view.topAnchor, constant: startingFrame.origin.y)
+        leadingConstraint = redView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: startingFrame.origin.x)
+        widthConstraint = redView.widthAnchor.constraint(equalToConstant: startingFrame.width)
+        heightConstraint = redView.heightAnchor.constraint(equalToConstant: startingFrame.height)
+       
+        [topConstraint,leadingConstraint,widthConstraint,heightConstraint].forEach({ $0?.isActive = true })
+        
+        self.view.layoutIfNeeded()
         
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
-            redView.frame = self.view.frame
+            self.topConstraint?.constant = 0
+            self.leadingConstraint?.constant = 0
+            self.widthConstraint?.constant = self.view.frame.width
+            self.heightConstraint?.constant = self.view.frame.height
+            
+            self.view.layoutIfNeeded()
+            
+            
         }, completion: nil)
     }
         
     @objc func handleRemoveRedView(gesture: UITapGestureRecognizer) {
         
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
-            gesture.view?.frame = self.startingFrame ?? .zero
+            
+            guard let startingFrame = self.startingFrame else { return }
+            
+//            self.appFullScreenController.tableView.contentOffset = .zero
+            self.topConstraint?.constant = startingFrame.origin.y
+            self.leadingConstraint?.constant = startingFrame.origin.x
+            self.widthConstraint?.constant = startingFrame.width
+            self.heightConstraint?.constant = startingFrame.height
+            
+            self.view.layoutIfNeeded()
             
         }, completion: { _ in
             gesture.view?.removeFromSuperview()
             self.appFullScreenController.removeFromParent()
             
         })
-        
         
     }
     
