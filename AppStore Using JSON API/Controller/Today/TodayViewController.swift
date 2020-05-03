@@ -12,6 +12,12 @@ final class TodayViewController: BaseListController, UICollectionViewDelegateFlo
     
     private let cellID = "cellId"
     private var startingFrame: CGRect?
+    private var appFullScreenController: UIViewController!
+    
+    let detailView: TodayAppDetailTableViewController = {
+        let view = TodayAppDetailTableViewController()
+        return view
+    }()
 
 
     override func viewDidLoad() {
@@ -46,9 +52,13 @@ final class TodayViewController: BaseListController, UICollectionViewDelegateFlo
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let redView = UIView()
-        redView.backgroundColor = .red
+        let appDetailFullScreen = TodayAppDetailTableViewController()
+        let redView = appDetailFullScreen.view!
         view.addSubview(redView)
+        
+        addChild(appDetailFullScreen)
+        self.appFullScreenController = appDetailFullScreen
+        
         redView.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
         redView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleRemoveRedView)))
         
@@ -66,16 +76,31 @@ final class TodayViewController: BaseListController, UICollectionViewDelegateFlo
     }
         
     @objc func handleRemoveRedView(gesture: UITapGestureRecognizer) {
-//        gesture.view?.removeFromSuperview()
         
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: {
             gesture.view?.frame = self.startingFrame ?? .zero
             
         }, completion: { _ in
             gesture.view?.removeFromSuperview()
+            self.appFullScreenController.removeFromParent()
+            
         })
         
         
+    }
+    
+    private func beginAnimationAppFullscreen() {
+        self.tabBarController?.tabBar.transform = CGAffineTransform(translationX: 0, y: 100)
+        self.tabBarController?.tabBar.frame.origin.y = self.view.frame.size.height
+        
+    }
+    
+    private func handleAppFullscreenDismissal() {
+        self.tabBarController?.tabBar.transform = .identity
+        if let tabBarFrame = self.tabBarController?.tabBar.frame {
+            self.tabBarController?.tabBar.frame.origin.y = self.view.frame.size.height - tabBarFrame.height
+
+        }
     }
     
     

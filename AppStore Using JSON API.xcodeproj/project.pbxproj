@@ -24,6 +24,8 @@
 		A5EB194C235B51FA0005D8A3 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB194B235B51FA0005D8A3 /* TodayViewController.swift */; };
 		A5EB194E235B52170005D8A3 /* AppsPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB194D235B52170005D8A3 /* AppsPageController.swift */; };
 		D7986B52245CEFA70062D924 /* TodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7986B51245CEFA70062D924 /* TodayCell.swift */; };
+		D7986B54245DC3420062D924 /* TodayAppDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7986B53245DC3420062D924 /* TodayAppDetailTableViewController.swift */; };
+		D7986B56245DCAC30062D924 /* TodayDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7986B55245DCAC30062D924 /* TodayDetailCell.swift */; };
 		EC01B9D6237B71FF00E704E6 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC01B9D5237B71FF00E704E6 /* AppGroup.swift */; };
 		EC0A69A2236DD61F00887123 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A1236DD61F00887123 /* BaseListController.swift */; };
 		EC0A69A7236DDCBB00887123 /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */; };
@@ -92,6 +94,8 @@
 		C1F12684C55D2FC4169E7458 /* Pods-AppStore Using JSON API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore Using JSON API.debug.xcconfig"; path = "Target Support Files/Pods-AppStore Using JSON API/Pods-AppStore Using JSON API.debug.xcconfig"; sourceTree = "<group>"; };
 		D29929AA46C039201477F327 /* Pods-AppStore Using JSON APIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore Using JSON APIUITests.release.xcconfig"; path = "Target Support Files/Pods-AppStore Using JSON APIUITests/Pods-AppStore Using JSON APIUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D7986B51245CEFA70062D924 /* TodayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCell.swift; sourceTree = "<group>"; };
+		D7986B53245DC3420062D924 /* TodayAppDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayAppDetailTableViewController.swift; sourceTree = "<group>"; };
+		D7986B55245DCAC30062D924 /* TodayDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDetailCell.swift; sourceTree = "<group>"; };
 		EC01B9D5237B71FF00E704E6 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		EC0A69A1236DD61F00887123 /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
 		EC0A69A6236DDCBB00887123 /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				D7986B51245CEFA70062D924 /* TodayCell.swift */,
+				D7986B55245DCAC30062D924 /* TodayDetailCell.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				A5EB194B235B51FA0005D8A3 /* TodayViewController.swift */,
+				D7986B53245DC3420062D924 /* TodayAppDetailTableViewController.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -563,11 +569,13 @@
 				EC547BF4238C5ADE00637179 /* AppPageDetailCollectionViewController.swift in Sources */,
 				ECBB7F3B2394110F0005289F /* AppPageHorizontalPreviewImageCollectionViewController.swift in Sources */,
 				EC58A03C23721ED700901990 /* AppsRowCell.swift in Sources */,
+				D7986B56245DCAC30062D924 /* TodayDetailCell.swift in Sources */,
 				EC01B9D6237B71FF00E704E6 /* AppGroup.swift in Sources */,
 				EC2B374B2398726A0023FE1F /* HorizontalSnappingController.swift in Sources */,
 				EC0A69A7236DDCBB00887123 /* AppsGroupCell.swift in Sources */,
 				EC4B783F237852EE00F3FAF7 /* AppsHeaderCell.swift in Sources */,
 				A5BA82F0235A95F2004635B3 /* ViewController.swift in Sources */,
+				D7986B54245DC3420062D924 /* TodayAppDetailTableViewController.swift in Sources */,
 				EC38B98F238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.swift in Sources */,
 				A50230EE236120DD00D55C4D /* SearchResult.swift in Sources */,
 				EC2B374D23987AF80023FE1F /* SnappingLayoutHelper.swift in Sources */,
