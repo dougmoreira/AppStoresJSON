@@ -25,7 +25,7 @@
 		A5EB194E235B52170005D8A3 /* AppsPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB194D235B52170005D8A3 /* AppsPageController.swift */; };
 		D783F25F245F6F67005172CA /* TodayFullScreenHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D783F25E245F6F67005172CA /* TodayFullScreenHeaderCell.swift */; };
 		D7986B52245CEFA70062D924 /* TodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7986B51245CEFA70062D924 /* TodayCell.swift */; };
-		D7986B54245DC3420062D924 /* TodayAppDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7986B53245DC3420062D924 /* TodayAppDetailTableViewController.swift */; };
+		D7986B54245DC3420062D924 /* FullScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7986B53245DC3420062D924 /* FullScreenController.swift */; };
 		D7986B56245DCAC30062D924 /* TodayDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7986B55245DCAC30062D924 /* TodayDetailCell.swift */; };
 		EC01B9D6237B71FF00E704E6 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC01B9D5237B71FF00E704E6 /* AppGroup.swift */; };
 		EC0A69A2236DD61F00887123 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0A69A1236DD61F00887123 /* BaseListController.swift */; };
@@ -96,7 +96,7 @@
 		D29929AA46C039201477F327 /* Pods-AppStore Using JSON APIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStore Using JSON APIUITests.release.xcconfig"; path = "Target Support Files/Pods-AppStore Using JSON APIUITests/Pods-AppStore Using JSON APIUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D783F25E245F6F67005172CA /* TodayFullScreenHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayFullScreenHeaderCell.swift; sourceTree = "<group>"; };
 		D7986B51245CEFA70062D924 /* TodayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCell.swift; sourceTree = "<group>"; };
-		D7986B53245DC3420062D924 /* TodayAppDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayAppDetailTableViewController.swift; sourceTree = "<group>"; };
+		D7986B53245DC3420062D924 /* FullScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenController.swift; sourceTree = "<group>"; };
 		D7986B55245DCAC30062D924 /* TodayDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDetailCell.swift; sourceTree = "<group>"; };
 		EC01B9D5237B71FF00E704E6 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
 		EC0A69A1236DD61F00887123 /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
@@ -298,7 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				A5EB194B235B51FA0005D8A3 /* TodayController.swift */,
-				D7986B53245DC3420062D924 /* TodayAppDetailTableViewController.swift */,
+				D7986B53245DC3420062D924 /* FullScreenController.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -578,7 +578,7 @@
 				EC0A69A7236DDCBB00887123 /* AppsGroupCell.swift in Sources */,
 				EC4B783F237852EE00F3FAF7 /* AppsHeaderCell.swift in Sources */,
 				A5BA82F0235A95F2004635B3 /* ViewController.swift in Sources */,
-				D7986B54245DC3420062D924 /* TodayAppDetailTableViewController.swift in Sources */,
+				D7986B54245DC3420062D924 /* FullScreenController.swift in Sources */,
 				EC38B98F238C6892005909A5 /* AppPageDatailHeaderCollectionReusableView.swift in Sources */,
 				A50230EE236120DD00D55C4D /* SearchResult.swift in Sources */,
 				EC2B374D23987AF80023FE1F /* SnappingLayoutHelper.swift in Sources */,

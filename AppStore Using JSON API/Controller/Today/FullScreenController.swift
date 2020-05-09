@@ -9,12 +9,15 @@
 
 import UIKit
 
-class TodayAppDetailTableViewController: UITableViewController {
+class FullScreenController: UITableViewController {
+    
+    var dismisHandler: (() -> ())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         tableView.separatorStyle = .none
+        tableView.allowsSelection = false
         
     }
     
@@ -43,6 +46,7 @@ class TodayAppDetailTableViewController: UITableViewController {
     
     @objc fileprivate func handleDismiss(button: UIButton) {
         button.isHidden = true
+        dismisHandler?()
     }
 
 }
